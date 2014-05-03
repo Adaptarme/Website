@@ -16,13 +16,37 @@
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
+            <header class="header" role="banner">
+            <h1 class="logo"><a href="#" title="Adaptar.ME" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="Adaptar.ME" /></a></h1>
+            <h2>Investigar, Enseñar, Desarrollar e Innovar</h2>
+            </header>
+            <section class="row" role="main">
+                <div class="col">
+                    <article>
+                        <h4><a href="#">Este es un título</a></h4>
+                        <p>Este es el contenido</p>
+                    </article>
+                                        <article>
+                        <h4><a href="#">Este es un título</a></h4>
+                        <p>Este es el contenido</p>
+                    </article>
+                                        <article>
+                        <h4><a href="#">Este es un título</a></h4>
+                        <p>Este es el contenido</p>
+                    </article>
+                                        <article>
+                        <h4><a href="#">Este es un título</a></h4>
+                        <p>Este es el contenido</p>
+                    </article>
+                                        <article>
+                        <h4><a href="#">Este es un título</a></h4>
+                        <p>Este es el contenido</p>
+                    </article>
                 </div>
-                <div class="col-md-4">
-
-                </div>
-            </div>
+            </section>
+            <footer class="footer">
+                <span>Todos los derechos reservados <?php echo date('Y') ?> Adaptarme. Chaco, Argentina. Hecho con <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/amor.png" title="Amor"></span> 
+            </footer>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
