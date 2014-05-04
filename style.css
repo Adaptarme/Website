@@ -52,7 +52,7 @@ body {
 =================================================*/
 .header {
 	background: url('./img/border-bottom-header.png') repeat-x right bottom;
-	padding-bottom: 20px;
+	padding-bottom: 25px;
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -73,7 +73,6 @@ body {
 /* Footer
 =================================================*/
 .footer {
-	/*border-top: #eee 1px solid;*/
 	text-align: right;
 	margin-bottom: 5px;
 }
