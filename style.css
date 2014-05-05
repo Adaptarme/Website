@@ -41,7 +41,7 @@ body {
 =================================================*/
 .container {
 	background: #ffffff url('./img/border-top-container.png') repeat-x right top;
-	max-width: 768px;
+	max-width: 600px;
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
     -ms-box-shadow: 0 1px 4px rgba(0,0,0,.2);
@@ -66,10 +66,23 @@ body {
 /* Row
 =================================================*/
 .row {
+	padding-left: 15px;
+	padding-right: 15px;
 	margin-bottom: 20px;
 }
 .row article {
 	margin-bottom: 20px;
+}
+.row article h3 {
+	margin: 0;
+}
+
+/* Sidebar
+=================================================*/
+.sidebar aside h3 {
+	font-size: 18px;
+	line-height: 1em;
+	margin: 0;
 }
 
 /* Footer
