@@ -1,27 +1,15 @@
 <?php
 
 
-function adaptarme_wp_title( $title, $sep ) {
+function adaptarme_wp_title( $title ) {
 	global $paged, $page;
+	
+	if ( is_feed() || is_home() || is_front_page() )
+		return	get_bloginfo( 'name' );
 
-	if ( is_feed() ) {
-		return $title;
-	}
-
-	// Add the site name.
-	$title .= get_bloginfo( 'name' );
-
-	// Add the site description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ) {
-		$title = "$title $sep $site_description";
-	}
-
-	// Add a page number if necessary.
-	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'twentyfourteen' ), max( $paged, $page ) );
-	}
-
-	return $title;
+	if ( $paged >= 2 || $page >= 2 )
+		$title = "$title / " . sprintf( __( 'Página %s', 'adaptarme' ), max( $paged, $page ) );
+	
+	return trim($title);
 }
 add_filter( 'wp_title', 'adaptarme_wp_title', 10, 2 );
