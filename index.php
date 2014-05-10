@@ -6,7 +6,7 @@ get_header(); ?>
                     <?php get_template_part( 'content', get_post_format() ); ?>
                 <?php endwhile; ?>
             <?php else : ?>
-                <p><?php _e('Lo sentimos, no hay posts publicados!'); ?></p>
+                <p>Lo sentimos, no hay posts publicados!</p>
             <?php endif; ?>
             </section>
 <?php
