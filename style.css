@@ -88,10 +88,10 @@ body {
 .footer {
 	text-align: right;
 	margin-bottom: 5px;
+	font-size: 11px;
 }
 .footer span {
-	color: #888888;
-	font-size: 11px;
+	color: #e74c3c;
 }
 
 /* Error
