@@ -1,4 +1,6 @@
-language: perl
+# see http://about.travis-ci.org/docs/user/languages/php/ for more hints
+language: php
+
 perl:
   - "5.16"
   - "5.14"
