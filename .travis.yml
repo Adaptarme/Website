@@ -1,13 +1,6 @@
-# see http://about.travis-ci.org/docs/user/languages/php/ for more hints
 language: php
-
-# list any PHP version you want to test against
 php:
-  # aliased to a recent 5.4.x version
   - 5.2
   - 5.3
   - 5.4
-
-# Versions of WordPress to test against
-env:
-  - WP_VERSION=master WP_MULTISITE=0
+  - 5.5
