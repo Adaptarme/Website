@@ -8,7 +8,7 @@
         <title><?php wp_title(''); ?></title>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <link rel="stylesheet" href="//static.adaptarme.com.ar/bootstrap/3.1.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?=<?php echo rand(); ?>">
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" />
