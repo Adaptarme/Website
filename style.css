@@ -53,10 +53,10 @@ body {
 /* Header
 =================================================*/
 .header {
-	background: url('./img/border-bottom-header.png') repeat-x right bottom;
+	/*background: url('./img/border-bottom-header.png') repeat-x right bottom;*/
 	padding-bottom: 28px;
 	text-align: center;
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 }
 .header h2 {
 	font-family: 'Open Sans';
@@ -67,8 +67,8 @@ body {
 /* Row
 =================================================*/
 .row {
-	padding-left: 15px;
-	padding-right: 15px;
+	/*padding-left: 15px;
+	padding-right: 15px;*/
 	margin-bottom: 20px;
 }
 .row article {
@@ -92,6 +92,12 @@ body {
 }
 .footer span {
 	color: #e74c3c;
+}
+
+/* Sticky
+=================================================*/
+.sticky {
+	margin-bottom: 10px;
 }
 
 /* Error
