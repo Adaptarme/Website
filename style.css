@@ -69,14 +69,8 @@ a:hover { color: #6E7D87; text-decoration: none; }
 
 /* Row
 =================================================*/
-.row {
-	/*padding-left: 15px;
-	padding-right: 15px;*/
-	margin-bottom: 20px;
-}
-.row article {
-	margin-bottom: 20px;
-}
+.row { margin-bottom: 20px; }
+.row article { margin-bottom: 20px; }
 
 /* Sidebar
 =================================================*/
@@ -89,19 +83,26 @@ a:hover { color: #6E7D87; text-decoration: none; }
 /* Footer
 =================================================*/
 .footer {
-	text-align: right;
-	margin-bottom: 5px;
-	font-size: 11px;
+	background: url('./img/border-bottom-header.png') repeat right bottom;
+	margin-bottom: 10px;
+	font-size: 12px;
+	text-align: center;
+	padding: 5px;
 }
-.footer span {
-	color: #e74c3c;
-}
+.footer p { margin-bottom: 0; }
+.footer span { color: #e74c3c; }
 
 /* Sticky
 =================================================*/
 .sticky {
 	margin-bottom: 10px;
 }
+
+.social li.google a { color: #B32917; }
+.social li.facebook a { color: #216ABD; }
+.social li.twitter a { color: #0086CD; }
+.social li.youtube a { color: #D13634; }
+.social a:hover { text-decoration: underline; }
 
 /* Error
 =================================================*/
