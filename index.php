@@ -1,4 +1,5 @@
 <?php
+
 get_header(); ?>
 			<div class="sticky col-md-12">
 				<a href="http://www.youtube.com/playlist?list=PLmpZi4g2hDnmS3gq6J1cHLf_pDT6maOS6" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/curso-basico-de-laravel.jpg" class="img-responsive" alt="Curso básico de Laravel"/></a>
