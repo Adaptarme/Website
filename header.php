@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="//static.adaptarme.com.ar/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?=<?php echo rand(); ?>">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" />
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
