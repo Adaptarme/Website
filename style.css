@@ -51,7 +51,7 @@ a:hover { color: #6E7D87; text-decoration: none; }
 
 /* Header
 =================================================*/
-.header { padding-bottom: 28px; text-align: center; }
+.header { padding-bottom: 15px; text-align: center; }
 .header h2 { font-family: 'robotolight'; font-size: 14px; margin: 0; }
 
 /* Row
