@@ -10,12 +10,12 @@ Version: 1.0
 /* Fonts
 =================================================*/
 @font-face {
-	font-family: 'Patua One';
-	src: url('./fonts/patuaone-regular.eot');
-	src: url('./fonts/patuaone-regular.eot?#iefix') format('embedded-opentype'),
-		 url('./fonts/patuaone-regular.woff') format('woff'),
-		 url('./fonts/patuaone-regular.ttf') format('truetype'),
-		 url('./fonts/patuaone-regular.svg#PatuaOneRegula') format('svg');
+	font-family: 'patuaoneregula';
+	src: url('./fonts/Patua-One-Regular.eot');
+	src: url('./fonts/Patua-One-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('./fonts/Patua-One-Regular.woff') format('woff'),
+		 url('./fonts/Patua-One-Regular.ttf') format('truetype'),
+		 url('./fonts/Patua-One-Regular.svg#patuaoneregula') format('svg');
 	font-style: normal;
 	font-weight: 400;
 }
