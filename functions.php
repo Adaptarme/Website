@@ -9,11 +9,10 @@
 
 
 /**
- * Crear un texto elemento title formato agradable y más específica para 
+ * Crear un texto para el title con un formato agradable y más específico para 
  * la salida de la cabeza del documento, sobre la base de la vista actual.
  *
  * @since Adaptarme 1.0
- *
  * @return string El título filtrado.
  */
 function adaptarme_wp_title( $title ) {
