@@ -35,7 +35,7 @@
 <body>
     <div class="container">
         <header class="header" role="banner">
-            <hgroup>
+            <hgroup role="heading">
                 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png"></a></h1>
                 <h2>Investigar, Enseñar, Desarrollar e Innovar</h2>
             </hgroup>
