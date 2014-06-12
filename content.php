@@ -15,6 +15,9 @@
 		<?php the_title( '<h2>', '</h2>' ); ?>
 		<?php the_content(); ?>
 	<?php else : ?>
+		<?php if ( has_post_thumbnail()) : ?>
+			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>
+		<?php endif; ?>
 		<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
 		<?php the_excerpt(); ?>
 	<?php endif; ?>

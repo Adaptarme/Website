@@ -91,6 +91,10 @@ a:hover { color: #6E7D87; text-decoration: none; }
 =================================================*/
 .error h3 { font-family: 'patuaoneregula'; font-size: 40px; margin: 0; }
 
+/* WordPress
+=================================================*/
+.wp-post-image { display: block; max-width: 100%; height: auto; }
+
 /* Media queries
 =================================================*/
 @media (min-width: 768px) {}
