@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Adaptarme
- * @since Adaptarme 1.0
+ * @since Adaptar.ME 1.0
  */
 ?>
 

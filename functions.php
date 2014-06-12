@@ -4,8 +4,24 @@
  *
  * @package WordPress
  * @subpackage Adaptarme
- * @since Adaptarme 1.0
+ * @since Adaptar.ME 1.0
  */
+
+if ( ! function_exists( 'adaptarme_setup' ) ) :
+	/**
+	* Instalar Adaptarme.
+	* 
+	* Configuración de los valores predeterminados del tema y los registros de
+	* soporte para diversas características de WordPress.
+	*
+	* @since Adaptar.ME 1.0
+	*/
+	function adaptarme_setup() {
+		// Habilitar la compatibilidad con Post Thumbnails.
+		add_theme_support( 'post-thumbnails' );
+	}
+endif; // adaptarme_setup
+add_action( 'after_setup_theme', 'adaptarme_setup' );
 
 
 /**
