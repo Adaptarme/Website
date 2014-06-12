@@ -7,7 +7,6 @@
  * @since Adaptarme 1.0
  */
 ?>
-    
     </div>
     <footer class="footer" role="contentinfo">
         <ul class="social list-inline">
