@@ -52,7 +52,6 @@ a:hover { color: #6E7D87; text-decoration: none; }
 /* Header
 =================================================*/
 .header { padding-bottom: 15px; text-align: center; }
-.header h2 { font-family: 'robotolight'; font-size: 14px; margin: 0; }
 
 /* Row
 =================================================*/
@@ -90,7 +89,7 @@ a:hover { color: #6E7D87; text-decoration: none; }
 
 /* Error
 =================================================*/
-.error h3 { font-family: 'Patua One'; font-size: 40px; margin: 0; }
+.error h3 { font-family: 'patuaoneregula'; font-size: 40px; margin: 0; }
 
 /* Media queries
 =================================================*/
