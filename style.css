@@ -40,7 +40,8 @@ a:hover { color: #6E7D87; text-decoration: none; }
 /* Container
 =================================================*/
 .container {
-	background: #ffffff url('./img/border-top-container.png') repeat-x right top;
+	background: #FFFFFF url('./img/border-top-container.png') repeat-x right top;
+	padding-top: 3px;
 	max-width: 768px;
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
 	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
@@ -51,8 +52,16 @@ a:hover { color: #6E7D87; text-decoration: none; }
 
 /* Header
 =================================================*/
-.header {}
-.header .navbar { float: right; font-size: 1.2em; }
+.header {
+	background-color: #F9F9F9;
+	margin-right: -15px;
+	margin-bottom: 20px;
+	margin-left: -15px;
+	padding-top: 25px;
+	padding-bottom: 15px;
+}
+.header h1 { margin: 0; }
+.header .navbar { float: right; margin-top: 8px; margin-bottom: 0; font-size: 1.3em; }
 
 /* Row
 =================================================*/
