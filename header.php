@@ -34,9 +34,20 @@
 
 <body>
     <div class="container">
-        <header class="header" role="banner">
-            <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png"></a></h1>
+        <header class="header clearfix" role="banner">
+            <div class="col-md-5">
+                <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="img-responsive" alt="Logo Adaptar.ME"></a></h1>
+            </div>
+            <div class="col-md-7">
+                <nav class="navbar" role="navigation">
+                    <h3 class="text-hide">Menu</h3>
+                    <ul class="list-inline">
+                        <li><a href="#">WordPress</a></li>
+                        <li><a href="#">Laravel</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <div class="row">
-        <?php the_breadcrumb(); ?>
+        <?php //the_breadcrumb(); ?>
