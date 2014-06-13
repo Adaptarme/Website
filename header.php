@@ -46,4 +46,4 @@
         </header>
 
         <div class="row">
-        <?php the_breadcrumb(); ?>
+        <?php //the_breadcrumb(); ?>
