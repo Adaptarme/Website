@@ -16,8 +16,8 @@ Version: 1.0
 		 url('./fonts/Patua-One-Regular.woff') format('woff'),
 		 url('./fonts/Patua-One-Regular.ttf') format('truetype'),
 		 url('./fonts/Patua-One-Regular.svg#patuaoneregula') format('svg');
-	font-style: normal;
-	font-weight: 400;
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
     font-family: 'robotolight';
@@ -28,15 +28,19 @@ Version: 1.0
          url('./fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 /* Styles General
 =================================================*/
 body { background-color: #f5f5f5; padding-top: 20px; }
-a { color: #263845; }
-a:hover { color: #6E7D87; text-decoration: none; }
+a { color: #2a6496; }
+a:hover { text-decoration: none; }
+p a:hover { text-decoration: underline; }
 h1, h2, h3, h4, h5, h6 { font-family: 'robotolight'; }
+h4 a { color: #263845;  }
+h4 a:hover { color: #6E7D87;  }
+article h2 { margin-top: 0px; }
+article h4 { margin-bottom: 5px; }
 
 /* Container
 =================================================*/
@@ -63,7 +67,6 @@ h1, h2, h3, h4, h5, h6 { font-family: 'robotolight'; }
 	padding-bottom: 15px;
 }
 .header h1 { margin: 0; }
-.header .navbar { float: right; margin-top: 8px; margin-bottom: 0; font-size: 1.3em; }
 
 /* Row
 =================================================*/
@@ -110,6 +113,18 @@ img.size-full, img.size-large, .wp-post-image, .post-thumbnail img { display: bl
 .alignleft { float: left; }
 .alignright { float: right; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+/* Navigation */
+.navbar { float: right; margin-top: 8px; margin-bottom: 0; font-size: 1.1em; }
+.navbar a { font-family: 'patuaoneregula'; color: #6E7D87; display: block; text-transform: uppercase; }
+.navbar a:hover { color: #53A3E0; }
+
+.navbar .current_page_item > a,
+.navbar .current_page_ancestor > a,
+.navbar .current-menu-item > a,
+.navbar .current-menu-ancestor > a {
+	color: #53A3E0;
+}
 
 /* Media queries
 =================================================*/
