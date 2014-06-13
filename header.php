@@ -40,11 +40,7 @@
             </div>
             <div class="col-md-6">
                 <nav class="navbar" role="navigation">
-                    <ul class="list-inline">
-                        <li><a href="#">WordPress</a></li>
-                        <li><a href="#">Laravel</a></li>
-                        <li><a href="#">Laravel</a></li>
-                    </ul>
+                    <?php echo simple_menu_list( 'primary' ); ?>
                 </nav>
             </div>
         </header>
