@@ -21,7 +21,7 @@
     <meta name="description" content="<?php echo get_bloginfo ( 'description' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <link rel="profile" href="http://gmpg.org/xfn/11">
