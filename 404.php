@@ -8,11 +8,19 @@
  */
 
 get_header(); ?>
-
-	<div class="error col-md-12">
-		<h3>Ooops... Error 404</h3>
-		<h4>Lo sentimos, pero la página que busca no existe.</h4>
-		<p>Revise la dirección introducida y vuelva a intentarlo o haz <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">clic aquí</a> para regresar.</p>
+	
+	<div class="error col-md-8">
+		<h2>Ooops... Error 404</h2>
+		<h3>Lo sentimos, pero la página que busca no existe.</h3>
+		<p>Desafortunadamente, la página que ha solicitado <strong>no se puede mostrar</strong>.
+		 Parece que ha perdido su camino, ya sea a través de un enlace erróneo o un error en la página que estabas tratando de alcanzar.</p>
+		<p>Por favor, siéntase libre de volver a la <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">página principal</a>
+		 o utilizar el cuadro de búsqueda en la parte superior de la página para encontrar la información que estabas buscando. Sentimos mucho las molestias.</p>
+		<h4>¿Qué se puede hacer?</h4>
+		<ul>
+			<li>Utilice el cuadro de búsqueda en la parte superior de la página para encontrar la información que estabas buscando.</li>
+			<li>Informe de este error mediante nuestro <a href="/contacto">formulario de contacto</a>. Estaremos muy agradecidos.</li>
+		</ul>
 	</div>
 
 <?php
