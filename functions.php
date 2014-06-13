@@ -91,7 +91,7 @@ function the_breadcrumb() {
                 echo $output;
                 echo '<strong title="' . $title . '"> ' . $title . '</strong>';
             } else {
-                echo '<li><strong> ' . get_the_title() . '</strong></li>';
+                echo '<li class="active">' . get_the_title() . '</li>';
             }
         }
         echo '</ol>';
@@ -137,5 +137,5 @@ function simple_menu_list( $menu_name ) {
         $menu_list .= '</ul>';
     }
     return $menu_list;
-    
+
 }
