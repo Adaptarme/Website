@@ -37,10 +37,10 @@ a { color: #2a6496; }
 a:hover { text-decoration: none; }
 p a:hover { text-decoration: underline; }
 h1, h2, h3, h4, h5, h6 { font-family: 'robotolight'; }
+h3, h4 { margin-bottom: 5px;  }
 h4 a { color: #263845;  }
 h4 a:hover { color: #6E7D87;  }
 article h2 { margin-top: 0px; }
-article h4 { margin-bottom: 5px; }
 
 /* Container
 =================================================*/
@@ -107,7 +107,14 @@ article h4 { margin-bottom: 5px; }
 /* Styles for WordPress
 =================================================*/
 /* Imágenes Responsive */
-img.size-full, img.size-large, .wp-post-image, .post-thumbnail img { display: block; max-width: 100%; height: auto; }
+img.size-full,
+img.size-large,
+.wp-post-image,
+.post-thumbnail img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
 
 /* Alignment */
 .alignleft { float: left; }
