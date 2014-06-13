@@ -17,9 +17,18 @@ if ( ! function_exists( 'adaptarme_setup' ) ) :
 	* @since Adaptar.ME 1.0
 	*/
 	function adaptarme_setup() {
+        
+        // Este tema utiliza wp_nav_menu().
+        register_nav_menus( array( 
+            'primary'   => 'Menú principal',
+            'secondary' => 'Menú secundario',
+            ) );
+
 		// Habilitar la compatibilidad con Post Thumbnails.
 		add_theme_support( 'post-thumbnails' );
-	}
+	
+    }
+
 endif; // adaptarme_setup
 add_action( 'after_setup_theme', 'adaptarme_setup' );
 
