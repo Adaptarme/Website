@@ -120,23 +120,22 @@ function the_breadcrumb() {
  * @return string La lista desordenada con los enlaces del menu.
  */
 function simple_menu_list( $menu_name ) {
-
+    
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-    $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+        $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+        
+        // Devuelve un objeto del menú de navegación.
+        $menu_items = wp_get_nav_menu_items( $menu->term_id );
 
-    // Devuelve un objeto del menú de navegación.
-    $menu_items = wp_get_nav_menu_items( $menu->term_id );
+        $menu_list = '<ul class="list-inline">';
 
-    $menu_list = '<ul class="list-inline">';
-
-    foreach ( (array) $menu_items as $key => $menu_item ) {
-        $title = $menu_item->title;
-        $url = $menu_item->url;
-        $menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
+        foreach ( (array) $menu_items as $key => $menu_item ) {
+            $title = $menu_item->title;
+            $url = $menu_item->url;
+            $menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
+        }
+        $menu_list .= '</ul>';
     }
-    $menu_list .= '</ul>';
-    }
-
     return $menu_list;
-
+    
 }
