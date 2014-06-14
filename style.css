@@ -37,9 +37,9 @@ a { color: #2a6496; }
 a:hover { text-decoration: none; }
 p a:hover { text-decoration: underline; }
 h1, h2, h3, h4, h5, h6 { font-family: 'robotolight'; }
-h3, h4 { margin-bottom: 5px;  }
+h3, h4 { margin-bottom: 5px; }
 h4 a { color: #263845;  }
-h4 a:hover { color: #6E7D87;  }
+h4 a:hover { color: #6E7D87; }
 article h2 { margin-top: 0px; }
 
 /* Container
