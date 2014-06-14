@@ -1,6 +1,6 @@
 <?php
 /**
- * Veinte Catorce funciones y definiciones.
+ * Funciones y definiciones.
  *
  * @package WordPress
  * @subpackage Adaptarme
