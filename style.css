@@ -58,7 +58,7 @@ article h2 { margin-top: 0px; }
 /* Header
 =================================================*/
 .header {
-	background: url('./img/30days.png') repeat-x left bottom;
+	background: url('./img/background-header.png') repeat-x left bottom;
 	border-bottom: 1px solid #E1E1E1;
 	margin-right: -15px;
 	margin-bottom: 20px;
