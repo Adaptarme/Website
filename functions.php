@@ -57,54 +57,6 @@ function adaptarme_wp_title( $title ) {
 }
 add_filter( 'wp_title', 'adaptarme_wp_title', 10, 2 );
 
-/**
- * Crear una lista con las migas de pán.
- *
- * @since Adaptarme 1.0
- * 
- * @link http://cazue.com/articles/wordpress-creating-breadcrumbs-without-a-plugin-2013
- * 
- * @return string La lista desordenada con los enlaces.
- */
-function the_breadcrumb() {
-    if (! is_home() ) {
-    	global $post;
-    	echo '<ol class="breadcrumb">';
-        echo '<li><a href="' . get_option('home') . '">';
-        echo '<span class="glyphicon glyphicon glyphicon-home"></span>';
-        echo '</a></li>';
-        if (is_category() || is_single()) {
-            echo '<li>';
-            the_category( ' </li><li> ' );
-            if ( is_single() ) {
-                echo '</li><li class="active">';
-                the_title();
-                echo '</li>';
-            }
-        } elseif ( is_page() ) {
-            if( $post->post_parent ) {
-                $anc = get_post_ancestors( $post->ID );
-                $title = get_the_title();
-                foreach ( $anc as $ancestor ) {
-                    $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li>';
-                }
-                echo $output;
-                echo '<strong title="' . $title . '"> ' . $title . '</strong>';
-            } else {
-                echo '<li class="active">' . get_the_title() . '</li>';
-            }
-        }
-        echo '</ol>';
-    } // end is_home()
-    /*elseif ( is_tag() ) { single_tag_title(); }
-    elseif ( is_day() ) { echo "<li>Archive for " . the_time( 'F jS, Y' ) . "</li>"; }
-    elseif ( is_month() ) { echo "<li>Archive for " . the_time( 'F, Y' ) . "</li>"; }
-    elseif ( is_year() ) { echo "<li>Archive for " . the_time( 'Y' ) . "</li>"; }
-    elseif ( is_author() ) { echo "<li>Author Archive</li>"; }
-    elseif ( isset( $_GET['paged'] ) && !empty( $_GET['paged'] ) ) { echo "<li>Blog Archives</li>"; }
-    elseif ( is_search() ) { echo"<li>Search Results</li>"; }*/
-}
-
 
 /**
  * Crear un menu personalizado.
