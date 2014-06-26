@@ -79,7 +79,7 @@ function simple_menu_list( $menu_name ) {
         // Devuelve un objeto del menú de navegación.
         $menu_items = wp_get_nav_menu_items( $menu->term_id );
 
-        $menu_list = '<ul class="list-inline">';
+        $menu_list = '<ul class="nav navbar-nav nav-effect">';
 
         foreach ( (array) $menu_items as $key => $menu_item ) {
             $title = $menu_item->title;
