@@ -53,7 +53,7 @@
         <div class="header-overlay">
             <div class="container">
                 <div class="titleinfo">
-                    <h1>Hola!</h1>
+                    <h1>Hola.</h1>
                 </div>
             </div>
         </div>

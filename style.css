@@ -32,8 +32,8 @@ Version: 1.0
 
 /* Reset
 =================================================*/
-::-moz-selection { background: #aed57c; color: #fff; }
-::selection { background: #aed57c; color: #fff; }
+::-moz-selection { background: #53A3E0; color: #fff; }
+::selection { background: #53A3E0; color: #fff; }
 ::-webkit-input-placeholder { color: #ACACAC; }
 :-moz-placeholder { color: #ACACAC; }
 ::-moz-placeholder { color: #ACACAC; }
@@ -190,6 +190,7 @@ img.size-large,
   z-index: 99;
 }
 .navbar-nav > li > a {
+  color: #666666;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
   font-size: 15px;
