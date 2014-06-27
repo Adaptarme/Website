@@ -34,21 +34,29 @@
 </head>
 
 <body>
-            <header id="header" class="fixed-nav"role="banner">
-                <div class="container">
-                    <div class="nav-container">
-                        <nav class="navbar navbar-default navbar-static" role="navigation">
-                            <div class="navbar-header">
-                                <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="img-responsive" alt="Logo Adaptar.ME"></a></h1>
-                            </div>
-                            <div class="collapse navbar-collapse bs-js-navbar-scrollspy pull-right">
-                                <?php echo simple_menu_list( 'primary' ); ?>
-                            </div>
-                        </nav>
+    <header id="header" class="fixed-nav"role="banner">
+        <div class="container">
+            <div class="nav-container">
+                <nav class="navbar navbar-default navbar-static" role="navigation">
+                    <div class="navbar-header">
+                        <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="img-responsive" alt="Logo Adaptar.ME"></a></h1>
                     </div>
-                </div><!-- .container -->
-            </header>
+                    <div class="collapse navbar-collapse bs-js-navbar-scrollspy pull-right">
+                        <?php echo simple_menu_list( 'primary' ); ?>
+                    </div>
+                </nav>
+            </div>
+        </div><!-- .container -->
+    </header>
 
+    <div id="common">
+        <div class="header-overlay">
+            <div class="titleinfo">
+                <h1>Hola.</h1>
+            </div>
+        </div>
+    </div>
+    
     <div class="container">
         <div class="row">
         
