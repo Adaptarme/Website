@@ -237,11 +237,10 @@ img.size-large,
 #common {
 	margin-bottom: 40px;
 	width: 100%;
-	float: left;
-	height: 338px;
+	height: 300px;
 	overflow: hidden;
 	position: relative;
-	background: url('http://imx.evenfly.com/assets/img/header.jpg');
+	background: url('./img/common.jpg');
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-attachment: fixed;
@@ -254,7 +253,7 @@ img.size-large,
 	z-index: 99;
 	top: 0;
 }
-#common .titleinfo { text-align: center; max-height: 167px; margin: 120px 20px 0; }
+#common .titleinfo { margin: 100px 0 0 0; }
 #common h1 {
   color: #fff;
   font-family: 'Raleway', sans-serif;
