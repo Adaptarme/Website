@@ -52,9 +52,7 @@
     <div id="common">
         <div class="header-overlay">
             <div class="container">
-                <div class="titleinfo">
-                    <h1>Hola.</h1>
-                </div>
+                <h1>Hola.</h1>
             </div>
         </div>
     </div>
