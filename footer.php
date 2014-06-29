@@ -7,6 +7,8 @@
  * @since Adaptar.ME 1.0
  */
 ?>
+		</div><!-- .row -->
+	</div><!-- .container -->
 <footer class="footer" role="contentinfo">
 	<div class="container">
 		<div class="row">

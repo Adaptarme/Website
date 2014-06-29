@@ -53,8 +53,11 @@
         <div class="header-overlay">
             <div class="container">
                 <h1>Hola.</h1>
-                <p>Somos entusiastas de las últimas tecnologías web y el open-source.</p>
+                <p>Somos entusiastas de las últimas tecnologías web y el software libre.</p>
             </div>
         </div>
     </div>
-    <?php endif; ?>        
+    <?php endif; ?>
+
+    <div class="container">
+    <div class="row">        
