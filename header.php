@@ -48,15 +48,17 @@
             </div>
         </div><!-- .container -->
     </header>
-
+    <?php if ( is_home() ) : ?>
     <div id="common">
         <div class="header-overlay">
             <div class="container">
                 <h1>Hola.</h1>
+                <p>Somos entusiastas de las últimas tecnologías web y el open-source.</p>
             </div>
         </div>
     </div>
-    
+    <?php endif; ?>
+
     <div class="container">
         <div class="row">
         
