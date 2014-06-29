@@ -7,15 +7,13 @@
  * @since Adaptar.ME 1.0
  */
 ?>
-    	</div><!-- .row -->
-    </div> <!-- .container -->
 <footer class="footer" role="contentinfo">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-6">
+			<div class="col-md-6">
 				<p class="text-left">Desarrollado con <span title="Amor">&#10084;</span> por Geeks</p>
 			</div>
-			<div class="col-xs-6">
+			<div class="col-md-6">
 				<ul class="social text-right list-inline">
 					<li class="google"><a href="https://plus.google.com/113406858234515973523" rel="publisher" target="_blank">Google+</a></li>
 					<li class="twitter"><a href="https://twitter.com/Adaptarme" target="_blank">Twitter</a></li>

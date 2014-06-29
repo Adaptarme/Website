@@ -57,8 +57,4 @@
             </div>
         </div>
     </div>
-    <?php endif; ?>
-
-    <div class="container">
-        <div class="row">
-        
+    <?php endif; ?>        
