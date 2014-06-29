@@ -95,12 +95,15 @@ article h2 { margin-top: 0px; }
 
 /* Social
 =================================================*/
-.social li.google a { color: #B32917; }
-.social li.facebook a { color: #216ABD; }
-.social li.twitter a { color: #0086CD; }
-.social li.youtube a { color: #D13634; }
-.social li.github a { color: #000000; }
-.social a:hover { text-decoration: underline; }
+
+.social li a {
+  color: #45545e;
+  font-size: 22px;
+}
+.social li a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
 
 /* Error
 =================================================*/
@@ -283,3 +286,5 @@ img.size-large,
 .blog { padding-top: 40px; }
 
 .gray { background-color: #FAFCF8; }
+
+

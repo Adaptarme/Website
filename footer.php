@@ -17,11 +17,11 @@
 			</div>
 			<div class="col-md-6">
 				<ul class="social text-right list-inline">
-					<li class="google"><a href="https://plus.google.com/113406858234515973523" rel="publisher" target="_blank">Google+</a></li>
-					<li class="twitter"><a href="https://twitter.com/Adaptarme" target="_blank">Twitter</a></li>
-					<li class="facebook"><a href="https://www.facebook.com/Adaptarme" target="_blank">Facebook</a></li>
-					<li class="youtube"><a href="https://www.youtube.com/channel/UCchyiTcrctsH92crCQo0PmQ" target="_blank">YouTube</a></li>
-					<li class="github"><a href="https://github.com/Adaptarme" target="_blank">GitHub</a></li>
+				<li><a href="https://www.facebook.com/Adaptarme" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://twitter.com/Adaptarme" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://plus.google.com/113406858234515973523" rel="publisher" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+					<li><a href="https://github.com/Adaptarme" target="_blank"><i class="fa fa-github"></i></a></li>
+					<li><a href="https://www.youtube.com/channel/UCchyiTcrctsH92crCQo0PmQ" target="_blank"><i class="fa fa-youtube"></i></a></li>
 				</ul>
 			</div>
 		</div>

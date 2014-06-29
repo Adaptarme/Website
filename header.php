@@ -24,6 +24,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link href='http://fonts.googleapis.com/css?family=Raleway:900,700,400,300%7COpen+Sans:400,700,800%7CLato:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" />
@@ -42,7 +43,7 @@
                         <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="img-responsive" alt="Logo Adaptar.ME"></a></h1>
                     </div>
                     <div class="collapse navbar-collapse bs-js-navbar-scrollspy pull-right">
-                        <?php echo simple_menu_list( 'primary' ); ?>
+                        <?php //echo simple_menu_list( 'primary' ); ?>
                     </div>
                 </nav>
             </div>
