@@ -32,3 +32,32 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>
 </body>
 </html>
+<!-- Modal -->
+<div class="modal fade" id="formContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content" role="form">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Contacta con nosotros</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="form-group">
+      		<label for="name">Nombre</label>
+      		<input type="text" class="form-control" id="name" placeholder="Ingrese su nombre completo">
+      	</div>
+      	<div class="form-group">
+      		<label for="email">Correo</label>
+      		<input type="email" class="form-control" id="email" placeholder="Ingrese su correo">
+      	</div>
+      	<div class="form-group">
+      		<label for="email">Mensaje</label>
+      		<textarea class="form-control" rows="3" placeholder="Escriva su mensaje"></textarea>
+      	</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Enviar mensaje</button>
+      </div>
+    </form>
+  </div>
+</div>

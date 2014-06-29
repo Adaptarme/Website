@@ -121,12 +121,13 @@ img.size-large,
 =================================================*/
 #header {
 	background: #ffffff url('./img/border-top-container.png') repeat-x 0 0;
-	padding-top: 2px;
+	padding-top: 4px;
   margin-bottom: 30px;
 }
 #header h1 { padding-bottom: 10px; }
 
 .navbar-collapse {
+  margin-top: 20px;
   max-height: none;
 }
 .navbar-toggle {
@@ -279,3 +280,5 @@ img.size-large,
 .gray { background-color: #FAFCF8; }
 
 
+.btn { border: none; padding: 10px 15px; font-size: 17px; }
+.btn-danger { background: #C25858; }
