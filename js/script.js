@@ -56,7 +56,7 @@ $(document).on('ready', function() {
 				content: $('#content').val()
 			},
 			success: function(msg) {
-				alert(msg);
+				console.log(msg);
 			},
 			error: function() {
 				alert('error');
