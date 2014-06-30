@@ -45,7 +45,7 @@
                     <div class="collapse navbar-collapse bs-js-navbar-scrollspy pull-right">
                         <?php //echo simple_menu_list( 'primary' ); ?>
                         <!-- Button trigger modal -->
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#formContact">Contacta con nosotros</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#modalContact">Contacta con nosotros</button>
                     </div>
                 </nav>
             </div>

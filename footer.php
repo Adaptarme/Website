@@ -28,14 +28,15 @@
     </div><!-- .container -->
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>
 </body>
 </html>
 <!-- Modal -->
-<div class="modal fade" id="formContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <form class="modal-content" role="form">
+  	<form id="formContact" class="modal-content" method="POST" role="form">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <h4 class="modal-title" id="myModalLabel">Contacta con nosotros</h4>
@@ -43,20 +44,20 @@
       <div class="modal-body">
       	<div class="form-group">
       		<label for="name">Nombre</label>
-      		<input type="text" class="form-control" id="name" placeholder="Ingrese su nombre completo">
+      		<input type="text" class="form-control" name="name" id="name" placeholder="Ingrese su nombre completo">
       	</div>
       	<div class="form-group">
       		<label for="email">Correo</label>
-      		<input type="email" class="form-control" id="email" placeholder="Ingrese su correo">
+      		<input type="email" class="form-control"name="email" id="email" placeholder="Ingrese su correo">
       	</div>
       	<div class="form-group">
       		<label for="email">Mensaje</label>
-      		<textarea class="form-control" rows="3" placeholder="Escriva su mensaje"></textarea>
+      		<textarea class="form-control" name="content" id="content" rows="3" placeholder="Escriva su mensaje"></textarea>
       	</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Enviar mensaje</button>
+        <button type="submit" class="btn btn-primary" id="sendContact">Enviar mensaje</button>
       </div>
     </form>
   </div>

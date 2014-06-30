@@ -91,3 +91,24 @@ function simple_menu_list( $menu_name ) {
     return $menu_list;
 
 }
+
+
+function enqueue_scripts_styles_init() {
+	//wp_enqueue_script( 'ajax-script', get_stylesheet_directory_uri().'/js/script.js', array('jquery'), 1.0 ); // jQuery will be included automatically
+	get_template_directory_uri() . '/js/script.js'; // Inside a parent theme
+	// get_stylesheet_directory_uri() . '/js/script.js'; // Inside a child theme
+	// plugins_url( '/js/script.js', __FILE__ ); // Inside a plugin
+	wp_localize_script( 'ajax-script', 'ajax_object', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) ); // setting ajaxurl
+}
+add_action('init', 'enqueue_scripts_styles_init');
+
+function send_email_contact() {
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$content = $_POST['content'];
+	echo $name . $email . $content;
+	die(); // stop executing script
+}
+add_action( 'wp_ajax_send_email', 'send_email_contact' ); // ajax for logged in users
+add_action( 'wp_ajax_nopriv_send_email', 'send_email_contact' ); // ajax for not logged in users
+?>
