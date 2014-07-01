@@ -106,7 +106,18 @@ function send_email_contact() {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$content = $_POST['content'];
-	echo '<strong>Felicidades</strong> , tu mensaje fue enviado! :)';
+
+	if ( $email !== '' ) :
+		$to = get_bloginfo( 'admin_email' ); // Destinatario/s del correo.
+		$subject = $name; // Título del correo electrónico a enviar.
+		$message = str_replace( "\n.", "\n..", $content );
+		$headers = 'From: ' . $email . "\r\n" .
+					 'Reply-To: ' . $email . "\r\n" .
+					 'X-Mailer: PHP/' . phpversion();
+		if ( mail( $to, $subject, $message, $headers ) ) // Enviar correo
+			echo '<strong>Felicidades</strong> , tu mensaje fue enviado! :)';
+	endif;
+	
 	die(); // stop executing script
 }
 add_action( 'wp_ajax_send_email', 'send_email_contact' ); // ajax for logged in users
