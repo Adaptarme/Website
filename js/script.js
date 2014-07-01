@@ -43,25 +43,28 @@ $(document).on('ready', function() {
 		}
 	});
 
-	$('#sendContact').on('click', function() {
-		// Si el formulario es True
-		$.ajax({
-			type: "POST",
-			action: 'send_email',
-			url: ajaxUrl,
-			data: {
+	$(form).on('submit', function(event) {
+    	event.preventDefault();
+    	if (form.valid()) {
+			$.ajax({
+				type: "POST",
 				action: 'send_email',
-				name: $('#name').val(),
-				email: $('#email').val(),
-				content: $('#content').val()
-			},
-			success: function(msg) {
-				console.log(msg);
-			},
-			error: function() {
-				alert('error');
-			}
-		});
+				url: ajaxUrl,
+				data: {
+					action: 'send_email',
+					name: $('#name').val(),
+					email: $('#email').val(),
+					content: $('#content').val()
+				},
+				success: function(msg) {
+					console.log(msg);
+				},
+				error: function() {
+					alert('error');
+				}
+			});
+		}
+
 	});
 
 });
