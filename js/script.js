@@ -64,6 +64,7 @@ $(document).on('ready', function() {
 					sendEmail.button('reset'); // Reseteamos el texto del button
 					//$(modal).modal('hide'); // Cerramos el modal
 					$(".alert").html(msg).show();
+					setTimeout(function(){ $('.alert').hide(); }, 5000);
 				},
 				error: function() {
 					alert('error');
