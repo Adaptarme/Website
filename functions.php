@@ -106,7 +106,7 @@ function send_email_contact() {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$content = $_POST['content'];
-	echo $name . $email . $content;
+	echo 'Gracias, su mensaje se a enviado! :)';
 	die(); // stop executing script
 }
 add_action( 'wp_ajax_send_email', 'send_email_contact' ); // ajax for logged in users

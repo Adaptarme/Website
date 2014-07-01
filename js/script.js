@@ -1,6 +1,7 @@
 $(document).on('ready', function() {
 
 	var ajaxUrl = 'wp-admin/admin-ajax.php';
+	var modal = $('#modalContact');
 	var form = $('#formContact');
 
 	form.validate({
@@ -57,7 +58,8 @@ $(document).on('ready', function() {
 					content: $('#content').val()
 				},
 				success: function(msg) {
-					console.log(msg);
+					$(form)[0].reset();
+					$(modal).modal('hide');
 				},
 				error: function() {
 					alert('error');
