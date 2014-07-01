@@ -42,6 +42,8 @@
         <h4 class="modal-title" id="myModalLabel">Contacta con nosotros</h4>
       </div>
       <div class="modal-body">
+        <div class="alert alert-success fade in" role="alert">
+        </div>
       	<div class="form-group">
       		<label for="name">Nombre</label>
       		<input type="text" class="form-control" name="name" id="name" placeholder="Ingrese su nombre completo">
@@ -57,7 +59,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary" id="sendContact">Enviar mensaje</button>
+        <button type="submit" class="btn btn-primary"  id="sendEmail" data-loading-text="Enviando...">Enviar mensaje</button>
       </div>
     </form>
   </div>

@@ -3,6 +3,7 @@ $(document).on('ready', function() {
 	var ajaxUrl = 'wp-admin/admin-ajax.php';
 	var modal = $('#modalContact');
 	var form = $('#formContact');
+	var sendEmail = $('#sendEmail');
 
 	form.validate({
 		rules: {
@@ -45,8 +46,9 @@ $(document).on('ready', function() {
 	});
 
 	$(form).on('submit', function(event) {
-    	event.preventDefault();
+    	event.preventDefault(); // Evitamos que el formulario se envie
     	if (form.valid()) {
+    		sendEmail.button('loading');
 			$.ajax({
 				type: "POST",
 				action: 'send_email',
@@ -58,8 +60,10 @@ $(document).on('ready', function() {
 					content: $('#content').val()
 				},
 				success: function(msg) {
-					$(form)[0].reset();
-					$(modal).modal('hide');
+					$(form)[0].reset(); // Limpiamos los campos del form
+					sendEmail.button('reset'); // Reseteamos el texto del button
+					//$(modal).modal('hide'); // Cerramos el modal
+					$(".alert").html(msg).show();
 				},
 				error: function() {
 					alert('error');

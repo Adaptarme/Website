@@ -283,3 +283,5 @@ img.size-large,
 .btn { border: none; padding: 10px 15px; font-size: 17px; }
 .btn-danger { background: #C25858; }
 .btn-primary { background: #77B3D4; }
+
+.alert { display: none; }
