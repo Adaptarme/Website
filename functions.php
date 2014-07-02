@@ -108,14 +108,13 @@ function send_email_contact() {
 	$email = $_POST['email'];
 	$content = $_POST['content'];
 
-	if ( $email !== '' ) :
-		//$to = get_bloginfo( 'admin_email' ); // Destinatario/s del correo.
-		$to = 'felix.ricardo.barros@gmail.com';
+	if ( $name !== '' && $email !== '' ) :
+		$to = get_bloginfo( 'admin_email' ); // Destinatario/s del correo.
 		$subject = $name; // Título del correo electrónico a enviar.
-		$message = str_replace( '\n.', '\n..', $content );
-		$headers = "From: " . $email . "\r\n" .
-					 "Reply-To: " . $email . "\r\n" .
-					 "X-Mailer: PHP/" . phpversion();
+		$message = str_replace( "\n.", "\n..", $content );
+		$headers = 'From: ' . $email . "\r\n" .
+				   'Reply-To: ' . $email . "\r\n" .
+				   'X-Mailer: PHP/' . phpversion();
 		if ( mail( $to, $subject, $message, $headers ) ) // Enviar correo
 			echo '<strong>Felicidades</strong> , tu mensaje fue enviado! :)';
 	endif;
