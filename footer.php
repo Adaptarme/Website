@@ -54,7 +54,7 @@
       	</div>
       	<div class="form-group">
       		<label for="email">Mensaje</label>
-      		<textarea class="form-control" name="content" id="content" rows="3" placeholder="Escriba su mensaje"></textarea>
+      		<textarea class="form-control" name="content" id="content" rows="5" placeholder="Escriba su mensaje"></textarea>
       	</div>
       </div>
       <div class="modal-footer">
