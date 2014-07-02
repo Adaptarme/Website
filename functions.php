@@ -92,23 +92,25 @@ function simple_menu_list( $menu_name ) {
 
 }
 
-
-function enqueue_scripts_styles_init() {
-	//wp_enqueue_script( 'ajax-script', get_stylesheet_directory_uri().'/js/script.js', array('jquery'), 1.0 ); // jQuery will be included automatically
-	get_template_directory_uri() . '/js/script.js'; // Inside a parent theme
-	// get_stylesheet_directory_uri() . '/js/script.js'; // Inside a child theme
-	// plugins_url( '/js/script.js', __FILE__ ); // Inside a plugin
-	wp_localize_script( 'ajax-script', 'ajax_object', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) ); // setting ajaxurl
-}
-add_action('init', 'enqueue_scripts_styles_init');
-
+/**
+ * Funcion para enviar el email de contacto.
+ *
+ * @since Adaptarme 1.0
+ * 
+ * @uses str_replace
+ * @uses phpversion
+ * @uses mail
+ * 
+ * @return string Mensaje para el usuario que envio el email
+ */
 function send_email_contact() {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$content = $_POST['content'];
 
 	if ( $email !== '' ) :
-		$to = get_bloginfo( 'admin_email' ); // Destinatario/s del correo.
+		//$to = get_bloginfo( 'admin_email' ); // Destinatario/s del correo.
+		$to = 'felix.ricardo.barros@gmail.com';
 		$subject = $name; // Título del correo electrónico a enviar.
 		$message = str_replace( "\n.", "\n..", $content );
 		$headers = 'From: ' . $email . "\r\n" .
@@ -118,8 +120,8 @@ function send_email_contact() {
 			echo '<strong>Felicidades</strong> , tu mensaje fue enviado! :)';
 	endif;
 	
-	die(); // stop executing script
+	die(); // detener la ejecución del script
 }
-add_action( 'wp_ajax_send_email', 'send_email_contact' ); // ajax for logged in users
+add_action( 'wp_ajax_send_email', 'send_email_contact' ); // ajax para los usuarios registrados
 add_action( 'wp_ajax_nopriv_send_email', 'send_email_contact' ); // ajax for not logged in users
 ?>
