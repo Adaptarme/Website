@@ -177,7 +177,7 @@ img.size-large,
 }
 .fixed-nav .nav {
   padding: 0;
-  margin-top: 34px;
+  margin-top: 14px;
 }
 .navbar-default {
   border: 0;
@@ -185,6 +185,9 @@ img.size-large,
 }
 .navbar-toggle {
   z-index: 99;
+}
+.navbar-nav > li > button {
+  margin-top: -13px;
 }
 .navbar-nav > li > a {
   color: #666666;
@@ -227,7 +230,6 @@ img.size-large,
   -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
      -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
       -ms-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-       -o-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 

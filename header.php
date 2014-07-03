@@ -43,9 +43,7 @@
                         <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="img-responsive" alt="Logo Adaptar.ME"></a></h1>
                     </div>
                     <div class="collapse navbar-collapse bs-js-navbar-scrollspy pull-right">
-                        <?php //echo simple_menu_list( 'primary' ); ?>
-                        <!-- Button trigger modal -->
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#modalContact">Contacta con nosotros</button>
+                        <?php echo simple_menu_list( 'primary' ); ?>
                     </div>
                 </nav>
             </div>

@@ -86,6 +86,8 @@ function simple_menu_list( $menu_name ) {
             $url = $menu_item->url;
             $menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
         }
+        
+        $menu_list .= '<li><button class="btn btn-primary" data-toggle="modal" data-target="#modalContact">Contacta con nosotros</button></li>';
         $menu_list .= '</ul>';
     }
     return $menu_list;
