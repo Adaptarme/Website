@@ -60,11 +60,11 @@ $(document).on('ready', function() {
 					content: $('#content').val()
 				},
 				success: function(msg) {
+					var alert = '.alert';
 					$(form)[0].reset(); // Limpiamos los campos del form
 					sendEmail.button('reset'); // Reseteamos el texto del button
-					//$(modal).modal('hide'); // Cerramos el modal
-					$(".alert").html(msg).show();
-					setTimeout(function(){ $('.alert').hide(); }, 5000);
+					$(alert).html(msg).show();
+					setTimeout(function(){ $(alert).hide(); }, 5000);
 				},
 				error: function() {
 					alert('error');
