@@ -34,7 +34,7 @@ body {
 	/*background: #ffffff url('./img/terms-pattern.png') repeat;*/
 }
 a {
-	color: #2a6496;
+	color: #2A6496;
 	-webkit-transition: all 300ms;
 	   -moz-transition: all 300ms;
 	    -ms-transition: all 300ms;
@@ -48,7 +48,7 @@ a:hover {
 	    	transition: all 300ms;
 }
 p a:hover { text-decoration: underline; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Raleway', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Lato', sans-serif; }
 h3, h4 { margin-bottom: 5px; }
 h4 a { color: #263845;  }
 h4 a:hover { color: #6E7D87; }
@@ -56,7 +56,7 @@ article h2 { margin-top: 0px; }
 
 /* Container
 =================================================*/
-.container { max-width: 885px; }
+.container { max-width: 900px; }
 
 /* Row
 =================================================*/
@@ -256,7 +256,6 @@ img.size-large,
 }
 #common h1 {
   color: #fff;
-  font-family: 'Raleway', sans-serif;
   font-size: 72px;
   text-transform: uppercase;
   font-weight: 900;
