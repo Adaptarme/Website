@@ -49,7 +49,7 @@
             </div>
         </div><!-- .container -->
     </header>
-    <?php if ( is_home() ) : ?>
+    <?php if ( is_front_page() ) : ?>
     <div id="common">
         <div class="header-overlay">
             <div class="container">
