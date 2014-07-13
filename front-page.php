@@ -37,7 +37,7 @@ get_header(); ?>
 			<div class="col-md-10">
 				<p class="lead">Nos encargamos desde el análisis conceptual, desarrollo web, diseño de interfaces y experiencia de usuario hasta la arquitectura tecnológica necesaria para soportar las soluciones implantadas mientras el cliente puede seguir centrado en su negocio.</p>
 			</div>
-		</div><!-- .proyects -->
+		</div><!-- .services-plus -->
 
 <?php
 //get_sidebar();
