@@ -71,13 +71,11 @@ article h2 { margin-top: 0px; }
 =================================================*/
 .footer {
   color: #6E7D87;
-	background: #263845;
+	background-color: #263845;
 	text-align: center;
-	padding: 35px;
-	padding-bottom: 0;
-  position: relative;
+  padding-top: 35px;
 }
-.footer p { margin-bottom: 0; }
+.footer p { margin-top: 8px; margin-bottom: 0; }
 .footer span { color: #e74c3c; }
 
 /* Sticky
@@ -269,20 +267,18 @@ img.size-large,
   max-width: 300px;
 }
 
-
+/* Services
+=================================================*/
 .services { text-align: center; margin-bottom: 40px; }
 .services img { margin: 15px auto 0; }
 .services h2 { font-size: 24px; margin-top: 0; margin-bottom: 25px; text-transform: uppercase; }
-.services-plus { padding-top: 15px; padding-bottom: 15px; margin-bottom: 30px; }
+.services-plus { padding-top: 15px; padding-bottom: 15px; }
 .services-plus .lead { margin-bottom: 0; }
 
-.blog { padding-top: 40px; }
-
-.gray { background-color: #FAFCF8; }
-
-
+/* Class
+=================================================*/
+.gray { background-color: #FAFCF8; margin-bottom: 40px; }
 .btn { border: none; padding: 10px 15px; font-size: 17px; }
 .btn-danger { background: #C25858; }
 .btn-primary { background: #77B3D4; }
-
 .alert { display: none; }

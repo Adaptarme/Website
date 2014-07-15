@@ -8,6 +8,9 @@
  */
 
 get_header(); ?>
+
+<div class="container">
+	<div class="row">        
 		<div class="services clearfix">
 			<div class="col-md-12">
 				<h2>Especialistas en desarrollar soluciones web</h2>
@@ -28,17 +31,21 @@ get_header(); ?>
 				<p>Ofrecemos soluciones de software como servicio.</p>
 			</div>
 		</div><!-- .services -->
-		
-		<div class="services-plus gray clearfix">
+	</div><!-- .row -->
+</div><!-- .container -->
 
+<div class="services-plus gray clearfix">
+	<div class="container">
+		<div class="row"> 
 			<div class="col-md-2">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/rocket.png" class="img-responsive">
 			</div>
 			<div class="col-md-10">
 				<p class="lead">Nos encargamos desde el análisis conceptual, desarrollo web, diseño de interfaces y experiencia de usuario hasta la arquitectura tecnológica necesaria para soportar las soluciones implantadas mientras el cliente puede seguir centrado en su negocio.</p>
 			</div>
-		</div><!-- .services-plus -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</div><!-- .services-plus -->
 
 <?php
-//get_sidebar();
 get_footer();
