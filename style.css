@@ -219,6 +219,7 @@ img.size-large,
   text-transform: uppercase;
   font-weight: 900;
   margin: 50px 0 18px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
 }
 #common p {
   color: #fff;
@@ -226,13 +227,19 @@ img.size-large,
   font-size: 24px;
   line-height: 35px;
   max-width: 300px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Services
 =================================================*/
 .services { text-align: center; margin-bottom: 40px; }
 .services img { margin: 15px auto 0; }
-.services h2 { font-size: 24px; margin-top: 0; margin-bottom: 25px; text-transform: uppercase; }
+.services h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
 .services-plus { padding-top: 15px; padding-bottom: 15px; }
 .services-plus .lead { margin-bottom: 0; }
 
