@@ -7,7 +7,7 @@ $(document).on('ready', function() {
 
 	form.validate({
 		rules: {
-			name: "required",
+			name: 'required',
 			email: {
 				required: true,
 				email: true
@@ -18,14 +18,14 @@ $(document).on('ready', function() {
 		},
 		messages: {
 			name: {
-				required: "Ingrese su nombre por favor.",
+				required: 'Ingrese su nombre por favor.',
 			},
 			email: {
-				required: "Ingrese su correo.",
-				email: "El correo no es valido."
+				required: 'Ingrese su correo.',
+				email: 'El correo no es valido.'
 			},
 			content: {
-				required: "Escriba el contenido del mensaje."
+				required: 'Escriba el contenido del mensaje.'
 			}
 		},
 		highlight: function(element) {
@@ -50,7 +50,7 @@ $(document).on('ready', function() {
     	if (form.valid()) {
     		sendEmail.button('loading');
 			$.ajax({
-				type: "POST",
+				type: 'POST',
 				action: 'send_email',
 				url: ajaxUrl,
 				data: {
