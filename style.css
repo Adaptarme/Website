@@ -31,7 +31,7 @@ Version: 1.0
 :-ms-input-placeholder { color: #ACACAC; }
 body {
 	font-family: 'Open Sans', sans-serif;
-	/*background: #ffffff url('./img/terms-pattern.png') repeat;*/
+	background: url('./img/terms-pattern.png') repeat;
 }
 a {
 	color: #2A6496;
@@ -236,12 +236,13 @@ img.size-large,
   margin-bottom: 25px;
   text-transform: uppercase;
 }
-.services-plus { padding-top: 15px; padding-bottom: 15px; }
+.services-plus { padding-top: 15px; padding-bottom: 20px; margin-bottom: 30px; }
 .services-plus .lead { margin-bottom: 0; }
 
 /* Class
 =================================================*/
 .gray { background-color: #FAFCF8; padding-top: 25px; }
+.white { background-color: #ffffff; } 
 .btn { border: none; padding: 10px 15px; font-size: 17px; }
 .btn-danger { background: #C25858; }
 .btn-primary { background: #77B3D4; }

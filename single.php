@@ -1,8 +1,6 @@
 <?php
 get_header(); ?>
 
-	<div class="container">
-		<div class="row">
 			<section class="col-md-8" role="main">
 				<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -12,8 +10,6 @@ get_header(); ?>
 				<p>Lo sentimos, no hay posts publicados!</p>
 			<?php endif; ?>
 			</section>
-		</div><!-- .row -->
-	</div><!-- .container -->
 	
 <?php
 get_sidebar();
