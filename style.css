@@ -205,7 +205,7 @@ img.size-large,
   height: 100%;
 	width: 100%;
 	position: absolute;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.3);
 	z-index: 99;
 	top: 0;
 }
@@ -223,7 +223,7 @@ img.size-large,
   font-size: 24px;
   line-height: 35px;
   max-width: 300px;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Services
