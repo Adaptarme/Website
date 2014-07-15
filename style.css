@@ -84,15 +84,8 @@ article h2 { margin-top: 0px; }
 
 /* Social
 =================================================*/
-
-.social li a {
-  color: #45545e;
-  font-size: 22px;
-}
-.social li a:hover {
-  color: #FFFFFF;
-  text-decoration: none;
-}
+.social li a { color: #45545e; font-size: 22px; }
+.social li a:hover { color: #ffffff; text-decoration: none; }
 
 /* Error
 =================================================*/
@@ -109,7 +102,6 @@ img.size-large,
 	max-width: 100%;
 	height: auto;
 }
-
 /* Alignment */
 .alignleft { float: left; }
 .alignright { float: right; }
@@ -124,32 +116,17 @@ img.size-large,
 }
 #header h1 { padding-bottom: 10px; }
 
-.navbar-collapse {
-  margin-top: 20px;
-  max-height: none;
-}
-.navbar-toggle {
-  margin-top: 30px;
-  background: #aed57c;
-  border: 0;
-}
-.navbar-nav {
-  margin: 0;
-}
-.res-menu-clicked {
-  padding-top: 300px !important;
-}
+.navbar-collapse { margin-top: 20px; max-height: none; }
+.navbar-toggle { margin-top: 30px; background: #aed57c; border: 0; }
+.navbar-nav { margin: 0; }
+.res-menu-clicked { padding-top: 300px !important; }
 /*this class will be added with #slider when user click on responsive navigation*/
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background: #aed57c;
 }
-.navbar-toggle:focus {
-  outline: 0;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background: #fff;
-}
+.navbar-toggle:focus { outline: 0; }
+.navbar-default .navbar-toggle .icon-bar { background: #fff; }
 .fixed-nav {
   width: 100%;
   float: left;
@@ -163,30 +140,13 @@ img.size-large,
           box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 
 }
-#header .fixed-nav {
-  background: #fff;
-}
-.fixed-nav .nav-container {
-  margin: auto;
-}
-.fixed-nav .navbar {
-  padding: 0;
-  margin: 0;
-}
-.fixed-nav .nav {
-  padding: 0;
-  margin-top: 14px;
-}
-.navbar-default {
-  border: 0;
-  background: none;
-}
-.navbar-toggle {
-  z-index: 99;
-}
-.navbar-nav > li > button {
-  margin-top: -13px;
-}
+.fixed-nav { background: #fff; }
+.fixed-nav .nav-container { margin: auto; }
+.fixed-nav .navbar { padding: 0; margin: 0; }
+.fixed-nav .nav { padding: 0; margin-top: 14px; }
+.navbar-default { border: 0; background: none; }
+.navbar-toggle { z-index: 99; }
+.navbar-nav > li > button { margin-top: -13px; }
 .navbar-nav > li > a {
   color: #666666;
   font-family: 'Raleway', sans-serif;
@@ -277,7 +237,7 @@ img.size-large,
 
 /* Class
 =================================================*/
-.gray { background-color: #FAFCF8; margin-bottom: 40px; }
+.gray { background-color: #FAFCF8; padding-top: 25px; }
 .btn { border: none; padding: 10px 15px; font-size: 17px; }
 .btn-danger { background: #C25858; }
 .btn-primary { background: #77B3D4; }
