@@ -109,11 +109,11 @@ img.size-large,
 	background: #ffffff url('./img/border-top-container.png') repeat-x 0 0;
   margin-bottom: 30px;
   padding-top: 4px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
-#header h1 { margin-top: 25px; }
+#header h1 { margin-top: 20px; }
 
-.navbar-collapse { margin-top: 25px; max-height: none; }
+.navbar-collapse { margin-top: 19px; max-height: none; }
 .navbar-toggle { margin-top: 30px; background: #aed57c; border: 0; }
 .navbar-nav { margin: 0; }
 .res-menu-clicked { padding-top: 300px !important; }
@@ -198,8 +198,7 @@ img.size-large,
   float: left;
 	overflow: hidden;
 	position: relative;
-	background: url('./img/common.jpg') repeat fixed 0% 0% / cover transparent;
-
+	background: url('./img/common.jpg') no-repeat fixed 0 0 / cover transparent;
 }
 #common .header-overlay {
   height: 100%;
@@ -214,7 +213,7 @@ img.size-large,
   font-size: 72px;
   text-transform: uppercase;
   font-weight: 900;
-  margin: 50px 0 18px;
+  margin: 45px 0 18px;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6);
 }
 #common p {
