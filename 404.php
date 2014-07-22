@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+
 		<div class="error col-md-8">
 			<h2>Ooops... Error 404</h2>
 			<h3>Lo sentimos, pero la página que busca no existe.</h3>
