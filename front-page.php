@@ -10,28 +10,26 @@
 get_header(); ?>
      
 		<div class="services clearfix">
-			<div class="col-md-12">
-				<h2>Especialistas en desarrollar soluciones web</h2>
-			</div>
-			<div class="col-md-4">
+			<h2 class="title">Especialistas en desarrollar soluciones web</h2>
+			<div class="col-sm-6 col-md-4">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/easel.png" class="img-responsive">
 				<h3>Consultoría</h3>
 				<p>Ayudamos a nuestros clientes a definir su estrategia web.</p>
 			</div>
-			<div class="col-md-4">
+			<div class="col-sm-6 col-md-4">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/dev.png" class="img-responsive">
 				<h3>Desarrollo</h3>
 				<p>Desarrollamos soluciones web robustas y escalables.</p>
 			</div>
-			<div class="col-md-4">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/speedometer.png" class="img-responsive">
+			<div class="col-sm-6 col-md-4">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/browser.png" class="img-responsive">
 				<h3>SaaS</h3>
 				<p>Ofrecemos soluciones de software como servicio.</p>
 			</div>
 		</div><!-- .services -->
 
 
-		<div class="services-plus white clearfix">
+		<div class="services-plus clearfix">
 			<div class="col-md-2">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/rocket.png" class="img-responsive">
 			</div>
@@ -39,6 +37,20 @@ get_header(); ?>
 				<p class="lead">Nos encargamos desde el análisis conceptual, desarrollo web, diseño de interfaces y experiencia de usuario hasta la arquitectura tecnológica necesaria para soportar las soluciones implantadas mientras el cliente puede seguir centrado en su negocio.</p>
 			</div>
 		</div><!-- .services-plus -->
+
+		<div class="teams clearfix">
+			<h2 class="title">Un equipo de profesionales</h2>
+			<div class="col-sm-6 clearfix" style="text-align: right;">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/facundo.jpg" alt="Facundo" class="img-circle pull-right" width="100" style="margin-left: 10px;">
+				<h3><a href="#" title="Ver curriculum de Facundo Benitez">Facundo Benitez</a></h3>
+				<h4>Ingeniero</h4>
+			</div>
+			<div class="col-sm-6 clearfix">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/felix.jpg" alt="Felix Barros" class="img-circle pull-left" width="100" style="margin-right: 10px;">
+				<h3><a href="#" title="Ver curriculum de Felix Barros">Felix Barros</a></h3>
+				<h4>Programador</h4>
+			</div>
+		</div><!-- .teams -->
 
 <?php
 get_footer();

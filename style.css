@@ -31,7 +31,6 @@ Version: 1.0
 :-ms-input-placeholder { color: #ACACAC; }
 body {
 	font-family: 'Open Sans', sans-serif;
-	background: url('./img/terms-pattern.png') repeat;
   position: relative;
 }
 a {
@@ -228,19 +227,19 @@ img.size-large,
 
 /* Services
 =================================================*/
-.services { text-align: center; margin-bottom: 40px; }
+.services { margin-bottom: 40px; text-align: center; }
 .services img { margin: 15px auto 0; }
-.services h2 {
-  font-size: 24px;
-  margin-top: 0;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-}
-.services-plus { padding-top: 15px; padding-bottom: 20px; margin-bottom: 30px; }
+.services-plus {  background: url('./img/terms-pattern.png'); padding-top: 15px; padding-bottom: 20px; margin-bottom: 50px; }
 .services-plus .lead { margin-bottom: 0; }
+
+/* Teams
+=================================================*/
+.teams { margin-bottom: 40px; }
+
 
 /* Class
 =================================================*/
+h2.title { text-align: center; font-size: 24px; margin-top: 0; margin-bottom: 25px; text-transform: uppercase; }
 .gray { background-color: #FAFCF8; padding-top: 25px; }
 .white { background-color: #ffffff; } 
 .btn { border: none; padding: 10px 15px; font-size: 17px; }
