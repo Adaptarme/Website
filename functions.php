@@ -32,7 +32,6 @@ if ( ! function_exists( 'adaptarme_setup' ) ) :
 endif; // adaptarme_setup
 add_action( 'after_setup_theme', 'adaptarme_setup' );
 
-
 /**
  * Crear un texto para el title con un formato agradable y más específico para 
  * la salida de la cabeza del documento, sobre la base de la vista actual.
@@ -57,7 +56,6 @@ function adaptarme_wp_title( $title ) {
 }
 add_filter( 'wp_title', 'adaptarme_wp_title', 10, 2 );
 
-
 /**
  * Crear un menu personalizado.
  *
@@ -72,7 +70,6 @@ add_filter( 'wp_title', 'adaptarme_wp_title', 10, 2 );
  * @return string La lista desordenada con los enlaces del menu.
  */
 function simple_menu_list( $menu_name ) {
-    
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
         $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
         
@@ -90,7 +87,6 @@ function simple_menu_list( $menu_name ) {
         $menu_list .= '</ul>';
     }
     return $menu_list;
-
 }
 
 /**
@@ -124,4 +120,3 @@ function send_email_contact() {
 }
 add_action( 'wp_ajax_send_email', 'send_email_contact' ); // ajax para los usuarios registrados
 add_action( 'wp_ajax_nopriv_send_email', 'send_email_contact' ); // ajax for not logged in users
-?>
