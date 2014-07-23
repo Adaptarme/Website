@@ -28,15 +28,15 @@ $(document).on('ready', function() {
 				required: 'Escriba el contenido del mensaje.'
 			}
 		},
-		highlight: function(element) {
+		highlight: function (element) {
 			$(element).closest('.form-group').addClass('has-error');
 		},
-		unhighlight: function(element) {
+		unhighlight: function (element) {
 			$(element).closest('.form-group').removeClass('has-error');
 		},
 		errorElement: 'span',
 		errorClass: 'help-block',
-		errorPlacement: function(error, element) {
+		errorPlacement: function (error, element) {
 			if(element.parent('.input-group').length) {
 				error.insertAfter(element.parent());
 			} else {
@@ -45,7 +45,7 @@ $(document).on('ready', function() {
 		}
 	});
 
-	$(form).on('submit', function(event) {
+	$(form).on('submit', function (event) {
     	event.preventDefault(); // Evitamos que el formulario se envie
     	if (form.valid()) {
     		sendEmail.button('loading');
@@ -59,14 +59,14 @@ $(document).on('ready', function() {
 					email: $('#email').val(),
 					content: $('#content').val()
 				},
-				success: function(msg) {
+				success: function (msg) {
 					var alert = '.alert';
 					$(form)[0].reset(); // Limpiamos los campos del form
 					sendEmail.button('reset'); // Reseteamos el texto del button
 					$(alert).html(msg).show();
 					setTimeout(function(){ $(alert).hide(); }, 5000);
 				},
-				error: function() {
+				error: function () {
 					alert('error');
 				}
 			});
