@@ -28,7 +28,6 @@ if ( ! function_exists( 'adaptarme_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 	
     }
-
 endif; // adaptarme_setup
 add_action( 'after_setup_theme', 'adaptarme_setup' );
 
