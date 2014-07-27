@@ -49,6 +49,7 @@
             </div>
         </div><!-- .container -->
     </header>
+    
     <?php if ( is_front_page() ) : ?>
     <div id="common">
         <div class="header-overlay">
