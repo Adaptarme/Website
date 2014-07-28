@@ -10,7 +10,7 @@
 
     </div><!-- .row -->
   </div><!-- .container -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer clearfix" role="contentinfo">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
