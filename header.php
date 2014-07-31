@@ -58,7 +58,7 @@
                 <p>Somos entusiastas de las últimas tecnologías web y el software libre.</p>
             </div>
         </div>
-    </div>
+    </div><!-- #common -->
     <?php endif; ?>
 
     <div class="container">
