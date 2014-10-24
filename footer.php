@@ -11,9 +11,9 @@
     </div><!-- .row -->
   </div><!-- .container -->
   
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/jquery/dist/jquery.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/jquery-validation/dist/jquery.validate.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/bootstrap/dist/js/bootstrap.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>
 </body>
 </html>
