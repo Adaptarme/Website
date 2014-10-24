@@ -38,19 +38,5 @@ get_header(); ?>
 			</div>
 		</div><!-- .services-plus -->
 
-		<div class="teams clearfix">
-			<h2 class="title">Un equipo de profesionales</h2>
-			<div class="col-sm-6 clearfix" style="text-align: right;">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/facundo.jpg" alt="Facundo" class="img-circle pull-right" width="100" style="margin-left: 10px;">
-				<h3><a href="#" title="Ver curriculum de Facundo Benitez">Facundo Benitez</a></h3>
-				<h4>Ingeniero</h4>
-			</div>
-			<div class="col-sm-6 clearfix">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/felix.jpg" alt="Felix Barros" class="img-circle pull-left" width="100" style="margin-right: 10px;">
-				<h3><a href="#" title="Ver curriculum de Felix Barros">Felix Barros</a></h3>
-				<h4>Programador</h4>
-			</div>
-		</div><!-- .teams -->
-
 <?php
 get_footer();

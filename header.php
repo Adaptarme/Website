@@ -49,17 +49,6 @@
             </div>
         </div><!-- .container -->
     </header>
-    
-    <?php if ( is_front_page() ) : ?>
-    <div id="common">
-        <div class="header-overlay">
-            <div class="container">
-                <h1>Hola.</h1>
-                <p>Somos entusiastas de las últimas tecnologías web y el software libre.</p>
-            </div>
-        </div>
-    </div><!-- #common -->
-    <?php endif; ?>
 
     <div class="container">
         <div class="row">   

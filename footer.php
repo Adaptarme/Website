@@ -10,27 +10,10 @@
 
     </div><!-- .row -->
   </div><!-- .container -->
-  <footer class="footer clearfix" role="contentinfo">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <p class="text-left">Desarrollado con <span title="Amor">&#10084;</span> por Geeks</p>
-        </div>
-        <div class="col-md-6">
-          <ul class="social text-right list-inline">
-            <li><a href="https://www.facebook.com/Adaptarme" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/Adaptarme" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://plus.google.com/113406858234515973523" rel="publisher" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="https://github.com/Adaptarme" target="_blank"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UCchyiTcrctsH92crCQo0PmQ" target="_blank"><i class="fa fa-youtube"></i></a></li>
-          </ul>
-        </div>
-      </div><!-- .row -->
-    </div><!-- .container -->
-  </footer>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>
 </body>
 </html>
