@@ -10,33 +10,24 @@
 get_header(); ?>
      
 		<div class="services clearfix">
-			<h2 class="title">Especialistas en desarrollar soluciones web</h2>
+			<h2>Hola.</h2>
+			<p class="lead">Somos un equipo de profesionales que se dedican al desarrollo de software y la capacitación en las últimas tecnologías.</p>
 			<div class="col-sm-6 col-md-4">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/easel.png" class="img-responsive">
 				<h3>Consultoría</h3>
-				<p>Ayudamos a nuestros clientes a definir su estrategia web.</p>
+				<p>Especialistas altamente capacitados para asesorarlos en todo.</p>
 			</div>
 			<div class="col-sm-6 col-md-4">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/dev.png" class="img-responsive">
 				<h3>Desarrollo</h3>
-				<p>Desarrollamos soluciones web robustas y escalables.</p>
+				<p>Desarrollamos soluciones profesionales, robustas y escalables.</p>
 			</div>
 			<div class="col-sm-6 col-md-4">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/browser.png" class="img-responsive">
-				<h3>SaaS</h3>
-				<p>Ofrecemos soluciones de software como servicio.</p>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bookshelf.png" class="img-responsive">
+				<h3>Capacitación</h3>
+				<p>Cursos para usuarios, directores de proyectos o diseñadores.</p>
 			</div>
 		</div><!-- .services -->
-
-
-		<div class="services-plus clearfix">
-			<div class="col-md-2">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/rocket.png" class="img-responsive">
-			</div>
-			<div class="col-md-10">
-				<p class="lead">Nos encargamos desde el análisis conceptual, desarrollo web, diseño de interfaces y experiencia de usuario hasta la arquitectura tecnológica necesaria para soportar las soluciones implantadas mientras el cliente puede seguir centrado en su negocio.</p>
-			</div>
-		</div><!-- .services-plus -->
-
+		
 <?php
 get_footer();
