@@ -9,6 +9,10 @@
 ?>
 
     </div><!-- .row -->
+    <hr />
+    <footer>
+      <p>Adaptar.ME &copy; 2013-<?php echo date('Y'); ?></p>
+    </footer>
   </div><!-- .container -->
   
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/jquery/dist/jquery.js"></script>

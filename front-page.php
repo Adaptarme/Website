@@ -28,6 +28,33 @@ get_header(); ?>
 				<p>Cursos para usuarios, directores de proyectos o diseñadores.</p>
 			</div>
 		</div><!-- .services -->
+		<hr />
+		<section class="row">
+			<article class="col-md-4">
+				<h4><a href="#">Introducción a HTML Y CSS</a></h4>
+				<p>Somos un equipo de profesionales que se dedican al desarrollo de software y la capacitación en las últimas tecnologías.</p>
+			</article>
+			<article class="col-md-4">
+				<h4><a href="#">Introducción a HTML Y CSS</a></h4>
+				<p>Somos un equipo de profesionales que se dedican al desarrollo de software y la capacitación en las últimas tecnologías.</p>
+			</article>
+			<article class="col-md-4">
+				<h4><a href="#">Introducción a HTML Y CSS</a></h4>
+				<p>Somos un equipo de profesionales que se dedican al desarrollo de software y la capacitación en las últimas tecnologías.</p>
+			</article>
+			<article class="col-md-4">
+				<h4><a href="#">Titulo de ejemplo</a></h4>
+				<p>Somos un equipo de profesionales que se dedican al desarrollo de software y la capacitación en las últimas tecnologías.</p>
+			</article>
+			<article class="col-md-4">
+				<h4><a href="#">Titulo de ejemplo</a></h4>
+				<p>Somos un equipo de profesionales que se dedican al desarrollo de software y la capacitación en las últimas tecnologías.</p>
+			</article>
+			<article class="col-md-4">
+				<h4><a href="#">Titulo de ejemplo</a></h4>
+				<p>Somos un equipo de profesionales que se dedican al desarrollo de software y la capacitación en las últimas tecnologías.</p>
+			</article>
+		</section><!-- .blog -->
 		
 <?php
 get_footer();
