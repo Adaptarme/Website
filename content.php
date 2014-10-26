@@ -19,6 +19,7 @@
 			<a href="<?php the_permalink(); ?>" rel="bookmark" class="thumbnail"><?php the_post_thumbnail(); ?></a>
 		<?php endif; ?>
 		<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
+		<small> por <?php the_author(); ?></small>
 		<?php the_excerpt(); ?>
 	<?php endif; ?>
 </article>

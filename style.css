@@ -227,7 +227,8 @@ img.size-large,
 
 /* Services
 =================================================*/
-.services { margin-bottom: 40px; text-align: center; }
+.services { margin-bottom: 50px; text-align: center; }
+.services h2 { font-size: 30px; font-weight: 400; color: #333; }
 .services img { margin: 15px auto 0; }
 .services-plus {  background: url('./img/terms-pattern.png'); padding-top: 15px; padding-bottom: 20px; margin-bottom: 50px; }
 .services-plus .lead { margin-bottom: 0; }
@@ -246,3 +247,4 @@ h2.title { text-align: center; font-size: 24px; margin-top: 0; margin-bottom: 25
 .btn-danger { background: #C25858; }
 .btn-primary { background: #77B3D4; }
 .alert { display: none; }
+.half-rule { width: 100px; margin: 40px auto; }
