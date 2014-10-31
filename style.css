@@ -48,10 +48,10 @@ a:hover {
   color: #2b2b2b;
 }
 p a:hover { text-decoration: underline; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Raleway', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Raleway', Arial, sans-serif; }
 h3, h4 { margin-bottom: 5px; }
 h4 a { color: #263845;  }
-h4 a:hover { color: #6E7D87; }
+h4 a:hover { color: #5cace2; }
 article h2 { margin-top: 0px; }
 
 /* Container
@@ -108,7 +108,7 @@ img.size-large,
 /* Header
 =================================================*/
 .header {
-	background: #ffffff url('./img/border-top-container.png') repeat-x 0 0;
+  background: #ffffff url('./img/border-top-container.png') repeat-x 0 0;
   margin-bottom: 30px;
   padding-top: 4px;
   padding-bottom: 10px;
@@ -175,14 +175,22 @@ img.size-large,
 /* Services
 =================================================*/
 .services { margin-bottom: 50px; text-align: center; }
-.services h2 { font-size: 30px; font-weight: 400; color: #333; }
+.services h2 { font-size: 30px; font-weight: 600; color: #333; }
 .services img { margin: 15px auto 0; }
 .services-plus {  background: url('./img/terms-pattern.png'); padding-top: 15px; padding-bottom: 20px; margin-bottom: 50px; }
 .services-plus .lead { margin-bottom: 0; }
 
 /* Blog
 =================================================*/
-.blog {}
+.views-row {
+  background: #fafafa;
+  /*border: 1px solid #ddd;*/
+  height: 100%;
+  margin-bottom: 30px;
+}
+.views-row .inner {
+  padding: 5px 10px;
+}
 
 /* Class
 =================================================*/
