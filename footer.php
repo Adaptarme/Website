@@ -8,12 +8,19 @@
  */
 ?>
 
-    </div><!-- .row -->
-    <hr />
-    <footer>
-      <p>Adaptar.ME &copy; 2013-<?php echo date('Y'); ?></p>
+    </div><!-- .wrapper -->
+
+    <footer class="sub-footer">
+      <div class="container">
+        <div class="inside">
+          <div class="row">
+            <div class="col-md-12">
+              <p>Adaptar.ME &copy; 2013-<?php echo date('Y'); ?></p>                  
+            </div>
+          </div><!-- .row -->
+        </div><!-- .inside -->
+      </div><!-- .container -->
     </footer>
-  </div><!-- .container -->
   
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/jquery/dist/jquery.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/jquery-validation/dist/jquery.validate.js"></script>

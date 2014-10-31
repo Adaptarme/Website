@@ -8,7 +8,9 @@
  */
 
 get_header(); ?>
-     
+
+<aside class="container">
+	<div class="row"> 
 		<div class="services clearfix">
 			<h2>Diseñamos y desarrollamos.</h2>
 			<p class="lead">Somos un equipo de profesionales que se dedican al desarrollo de software y la capacitación en las últimas tecnologías.</p>
@@ -27,15 +29,21 @@ get_header(); ?>
 				<h3>Capacitación</h3>
 				<p>Cursos para usuarios, directores de proyectos o diseñadores.</p>
 			</div>
-		</div><!-- .services -->
-		<hr class="half-rule">
-		<section class="row" role="main">
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<article class="col-md-4">
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			</article>
-			<?php endwhile; endif; ?>
-		</section><!-- .blog -->
+		</div>
+	</div><!-- .row -->
+</aside>
+
+<hr class="half-rule">
+
+<section class="container" role="main">
+	<div class="row"> 
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<article class="col-md-4">
+			<?php get_template_part( 'content', get_post_format() ); ?>
+		</article>
+		<?php endwhile; endif; ?>
+	</div><!-- .row -->
+</section>
 		
 <?php
 get_footer();

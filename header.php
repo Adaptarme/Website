@@ -23,6 +23,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link href='http://fonts.googleapis.com/css?family=Raleway:900,700,400,300%7COpen+Sans:400,700,800%7CLato:400,700' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,500,700,600,800,900,100,200,300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
@@ -35,7 +36,7 @@
 </head>
 
 <body>
-    <header id="header" class="fixed-nav" role="banner">
+    <header class="header" role="banner">
         <div class="container">
             <div class="nav-container">
                 <nav class="navbar navbar-default navbar-static" role="navigation">
@@ -50,5 +51,4 @@
         </div><!-- .container -->
     </header>
 
-    <div class="container">
-        <div class="row">   
+    <div class="wrapper clearfix">  
