@@ -36,7 +36,7 @@ get_header(); ?>
 <hr class="half-rule">
 
 <section class="container" role="main">
-	<div class="row"> 
+	<div class="row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="col-md-4">
 			<?php get_template_part( 'content', get_post_format() ); ?>
