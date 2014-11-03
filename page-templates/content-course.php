@@ -1,6 +1,6 @@
 <?php
 /**
- * La plantilla que se utiliza para la visualización de contenido de la página
+ * Template Name: Página Curso
  *
  * @package WordPress
  * @subpackage Adaptarme

@@ -63,8 +63,6 @@ article h2 { margin-top: 0px; }
 .wrapper {
   min-height: 100%;
   height: auto;
-  position: relative;
-  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -186,7 +184,7 @@ img.size-large,
   background: #fafafa;
   /*border: 1px solid #ddd;*/
   height: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .views-row .inner {
   padding: 5px 10px;

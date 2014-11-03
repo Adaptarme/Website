@@ -7,7 +7,7 @@
  * @since Adaptar.ME 1.0
  */
 ?>
-
+    </div>
     </div><!-- .wrapper -->
 
     <footer class="sub-footer">

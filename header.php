@@ -51,4 +51,5 @@
         </div><!-- .container -->
     </header>
 
-    <div class="wrapper clearfix">  
+    <div class="wrapper clearfix">
+    <div class="container">  

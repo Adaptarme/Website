@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<aside class="container">
+<aside>
 	<div class="row"> 
 		<div class="services clearfix">
 			<h2>Diseñamos y desarrollamos.</h2>
@@ -35,7 +35,7 @@ get_header(); ?>
 
 <hr class="half-rule">
 
-<section class="container" role="main">
+<section role="main">
 	<div class="row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="col-md-4">
