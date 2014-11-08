@@ -13,16 +13,20 @@
 <article id="post-<?php the_ID(); ?>">
 	<?php if ( is_single() || is_category() || is_archive() ) : ?>
 		<?php the_title( '<h2>', '</h2>' ); ?>
-		<?php the_content(); ?>
+		<div class="lead">
+			<?php the_excerpt(); ?>
+		</p>
+		<div class="paragraphs">
+			<?php the_content(); ?>
+		</div>
 	<?php else : ?>
 		<div class="views-row">
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><img src="http://demo.symphonythemes.com/drupal7/helpdesk/sites/demo.symphonythemes.com.drupal7.helpdesk/files/styles/blog-modern/public/field/image/dubai-69386.resized.jpg" class="img-responsive"></a>
-			<div class="inner">
 			<?php if ( has_post_thumbnail()) : ?>
-				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>
+				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'medium', array( 'class' => 'img-responsive' ) ); ?></a>
 			<?php endif; ?>
+			<div class="inner">
 				<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
-				<?php //the_excerpt(); ?>
+				<?php the_excerpt(); ?>
 			</div>
 		</div>
 	<?php endif; ?>

@@ -2,8 +2,8 @@
 Theme Name: Adaptarme
 Theme URI: https://github.com/Adaptarme/Website
 Author: el equipo Adaptar.ME
-Author URI: http://Adapatarme.com.ar
-Description: Tema para el sitio web de la comunidad Adaptarme.
+Author URI: http://www.adapatarme.com.ar
+Description: Tema para el sitio web de Adaptar.ME.
 Version: 1.0
 */
 
@@ -180,15 +180,25 @@ img.size-large,
 
 /* Blog
 =================================================*/
-.views-row {
-  background: #fafafa;
-  /*border: 1px solid #ddd;*/
-  height: 100%;
-  margin-bottom: 50px;
+.views-row { background: #fafafa; height: 100%; margin-bottom: 50px; }
+.views-row .inner { padding: 5px 10px; }
+article .paragraphs {
+  color: #333333;
+  font-size: 17px;
+  line-height: 1.6em;
+  margin-top: 17px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  max-width: 700px;
+  word-break: break-word;
+  font-family: sans-serif; 
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
 }
-.views-row .inner {
-  padding: 5px 10px;
-}
+article .paragraphs p { margin-bottom: 20px; }
 
 /* Class
 =================================================*/
