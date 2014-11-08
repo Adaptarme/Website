@@ -119,3 +119,10 @@ function send_email_contact() {
 }
 add_action( 'wp_ajax_send_email', 'send_email_contact' ); // ajax para los usuarios registrados
 add_action( 'wp_ajax_nopriv_send_email', 'send_email_contact' ); // ajax for not logged in users
+
+
+// Modificar el ancho y alto del iframe
+function bigger_embed_size() { 
+	return array( 'width' => 570, 'height' => 321 );
+}
+add_filter( 'embed_defaults', 'bigger_embed_size' );
