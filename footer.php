@@ -7,8 +7,7 @@
  * @since Adaptar.ME 1.0
  */
 ?>
-      </div><!-- .row -->
-    </div>
+      </div><!-- .container -->
     </div><!-- .wrapper -->
 
     <footer class="sub-footer">
@@ -54,8 +53,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary"  id="sendEmail" data-loading-text="Enviando...">Enviar mensaje</button>
+        <button type="button" class="btn btn-default text-left" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-success text-right"  id="sendEmail" data-loading-text="Enviando...">Enviar mensaje</button>
       </div>
     </form>
   </div>

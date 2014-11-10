@@ -76,13 +76,14 @@ function simple_menu_list( $menu_name ) {
         $menu_items = wp_get_nav_menu_items( $menu->term_id );
 
         $menu_list = '<ul class="nav navbar-nav nav-effect">';
+        $menu_list .= '<li><a href="/">Inicio</a></li>';
         foreach ( (array) $menu_items as $key => $menu_item ) {
             $title = $menu_item->title;
             $url = $menu_item->url;
             $menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
         }
         
-        $menu_list .= '<li><button class="btn btn-primary" data-toggle="modal" data-target="#modalContact">Contacta con nosotros</button></li>';
+        $menu_list .= '<li><a href="#" data-toggle="modal" data-target="#modalContact">Contacto</a></li>';
         $menu_list .= '</ul>';
     }
     return $menu_list;

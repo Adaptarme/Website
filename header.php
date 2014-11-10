@@ -52,5 +52,4 @@
     </header>
 
     <div class="wrapper clearfix">
-    <div class="container">
-        <div class="row">   
+    <div class="container">  
