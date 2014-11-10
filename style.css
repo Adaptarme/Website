@@ -30,8 +30,7 @@ Version: 1.0
 ::-moz-placeholder { color: #ACACAC; }
 :-ms-input-placeholder { color: #ACACAC; }
 html, body {
-  /*background-color: #f7f6f2;*/
-  background-color: #f8f8f8;
+  background-color: #f7f6f2;
   font-family: 'Open Sans', sans-serif;
   height: 100%;
   margin: 0;
