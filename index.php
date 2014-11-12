@@ -35,7 +35,7 @@ get_header(); ?>
 			<h3>Capacitación</h3>
 			<p>Cursos para usuarios, directores de proyectos o diseñadores.</p>
 		</div>
-	</div><!-- .b --> 
+	</div><!-- .b -->
 </aside><!-- .services -->
 
 <section class="row" role="main">

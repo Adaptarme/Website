@@ -26,6 +26,7 @@
 			<?php endif; ?>
 			<div class="inner">
 				<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
+				<small class="text-muted">Por Felix Barros</small>
 				<?php the_excerpt(); ?>
 			</div>
 		</div>
