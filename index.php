@@ -12,7 +12,7 @@ get_header(); ?>
 <aside class="services clearfix">
 	<div class="a">
 	<div class="tini"></div>
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner2.jpg" class="img-responsive">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner1.jpg" class="img-responsive">
 		<div class="intro">
 			<h2>Hola.</h2>
 			<p class="lead">Somos un equipo de profesionales que se dedican al desarrollo de software y a la capacitación en las últimas tecnologías.</p>

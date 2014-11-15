@@ -10,7 +10,6 @@
 get_header(); ?>
 
 <article id="post-<?php the_ID(); ?>">
-	<?php the_title( '<h2>', '</h2>' ); ?>
 	<?php the_content(); ?>
 </article>
 

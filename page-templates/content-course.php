@@ -7,12 +7,19 @@
  * @since Adaptar.ME 1.0
  */
 
-get_header(); ?>
+get_template_part( 'partials/header' ); ?>
 
-<article id="post-<?php the_ID(); ?>">
-	<?php the_title( '<h2>', '</h2>' ); ?>
-	<?php the_content(); ?>
-</article>
+<div class="row">
+	<section class="col-md-12" role="main">
+		<article id="post-<?php the_ID(); ?>">
+			<div class="paragraphs">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php the_content(); ?>
+			<?php endwhile; ?>
+			</div>
+		</article>
+	</section>
+</div>
 
 <?php
 get_footer();
