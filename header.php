@@ -22,8 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:900,700,400,300%7COpen+Sans:400,700,800%7CLato:400,700' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Raleway:400,500,700,600,800,900,100,200,300" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500%7COpen+Sans:400,700,800%7CLato:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
@@ -39,9 +38,9 @@
     <header class="header" role="banner">
         <div class="container">
             <div class="nav-container">
-                <nav class="navbar navbar-default navbar-static" role="navigation">
+                <nav class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
-                        <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="img-responsive" alt="Logo Adaptar.ME"></a></h1>
+                        <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" class="img-responsive" alt="Logo Adaptar.ME"></a></h1>
                     </div>
                     <div class="collapse navbar-collapse pull-right">
                         <?php echo simple_menu_list( 'primary' ); ?>
