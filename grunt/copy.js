@@ -10,7 +10,6 @@ module.exports = {
 			'./css/*',
 			'./fonts/*',
 			'./images/*',
-			'./img/*',
 			'./js/*',
 			'./libs/*',
 			'./page-templates/*',

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>

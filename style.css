@@ -211,7 +211,7 @@ img.size-large,
 }
 .services .b { margin-bottom: 20px; text-align: center; }
 .services-plus {
-  background: url('./img/terms-pattern.png');
+  background: url('./images/terms-pattern.png');
   padding-top: 15px;
   padding-bottom: 20px;
   margin-bottom: 50px;
@@ -254,7 +254,7 @@ article .paragraphs p { margin-bottom: 20px; }
 }
 .border-holder {
   background-color: #c3c3c5;
-  background-image: url('images/banner1.jpg');
+  background-image: url('./images/banner1.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
