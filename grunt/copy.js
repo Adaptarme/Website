@@ -5,7 +5,6 @@ module.exports = {
 	html: {
 		src: [
 			'./*.php',
-			'./style.css',
 			'./*.png',
 			'./css',
 			'./fonts/*',

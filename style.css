@@ -396,3 +396,7 @@ Botones
   border-color: #C74B4A;
   color: #FFFFFF;
 }
+
+.form-control {
+  border-radius: 1px;
+}

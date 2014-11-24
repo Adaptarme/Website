@@ -23,11 +23,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500%7COpen+Sans:400,700,800%7CLato:400,700' rel='stylesheet' type='text/css'>
-    <!-- build:css css/libs.css --> 
+    <!-- build:css css/main.css --> 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/font-awesome/css/font-awesome.css">
-    <!-- endbuild -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+    <!-- endbuild -->
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
     <!--[if lt IE 9]>
