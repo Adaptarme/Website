@@ -2,7 +2,7 @@
  * @link https://github.com/yeoman/grunt-usemin
  */
 module.exports = {
-	html: 'index.html',
+	html: ['header.php', 'footer.php'],
 	options: {
 		dest: '../dist'
 	}

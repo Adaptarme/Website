@@ -7,11 +7,9 @@ module.exports = {
 			'./*.php',
 			'./style.css',
 			'./*.png',
-			'./css/*',
+			'./css',
 			'./fonts/*',
 			'./images/*',
-			'./js/*',
-			'./libs/*',
 			'./page-templates/*',
 			'./partials/*'
 			],

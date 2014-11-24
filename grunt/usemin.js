@@ -2,5 +2,5 @@
  * @link https://github.com/yeoman/grunt-usemin
  */
 module.exports = {
-	html: ['../dist/index.html']
+	html: ['../dist/header.php', '../dist/footer.php']
 };
