@@ -41,7 +41,7 @@ get_header(); ?>
 <section class="row" role="main">
 	<h2 style="font-weight: 300; margin-bottom: 20px;" class="text-center">Descubre las últimas publicaciones</h2>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<article class="col-md-4">
+	<article class="col-lg-4">
 		<?php get_template_part( 'content', get_post_format() ); ?>
 	</article>
 	<?php endwhile; endif; ?>
