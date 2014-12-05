@@ -102,7 +102,8 @@ function simple_menu_list( $menu_name ) {
  */
 function send_email_contact() {
 	$name = $_POST['name'];
-	$email = $_POST['email'];
+	/*$email = $_POST['email'];*/
+	$email = 'contacto@adaptar.me';
 	$content = $_POST['content'];
 
 	if ( $name !== '' && $email !== '' ) :

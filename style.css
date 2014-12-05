@@ -294,8 +294,7 @@ article .paragraphs p { margin-bottom: 20px; }
 /* Styles boostrap
 =================================================*/
 .modal-content {
-  border-radius: 0px;
-  border-bottom: 1px solid #e6e6e6;
+  border-radius: 1px;
 }
 .modal-header {
   background-color: #f7f6f2;
@@ -312,6 +311,9 @@ article .paragraphs p { margin-bottom: 20px; }
 /*
 Botones
 */
+.btn {
+  border-radius: 2px;
+}
 .btn-default {
   background-color: #ABB7B7;
   border-color: #ABB7B7;
@@ -398,5 +400,5 @@ Botones
 }
 
 .form-control {
-  border-radius: 1px;
+  border-radius: 2px;
 }
