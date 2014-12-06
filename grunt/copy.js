@@ -10,7 +10,8 @@ module.exports = {
 			'./fonts/*',
 			'./images/*',
 			'./page-templates/*',
-			'./partials/*'
+			'./partials/*',
+			'style.css'
 			],
 		dest: '../dist/'
     }
