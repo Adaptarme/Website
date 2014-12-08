@@ -22,7 +22,7 @@
 	<?php else : ?>
 		<div class="views-row">
 			<?php if ( has_post_thumbnail()) : ?>
-				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'medium', array( 'class' => 'img-responsive' ) ); ?></a>
+				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'large', array( 'class' => 'img-responsive' ) ); ?></a>
 			<?php endif; ?>
 			<div class="inner">
 				<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>

@@ -126,3 +126,38 @@ function bigger_embed_size() {
 	return array( 'width' => 570, 'height' => 321 );
 }
 add_filter( 'embed_defaults', 'bigger_embed_size' );
+
+/**
+ * Agregamos campos en el perfil del usuarios para las redes sociales.
+ */
+function modify_user_contact_methods( $user_contact ) {
+
+	/* Add user contact methods */
+	$user_contact['facebook'] = __('Facebook'); 
+	$user_contact['twitter'] = __('Twitter');
+
+	return $user_contact;
+}
+add_filter('user_contactmethods', 'modify_user_contact_methods');
+
+/**
+ * Función para mostrar una lista con las redes sociales del autor.
+ */
+function social_author( $userID ) {
+	$twitter = get_the_author_meta('twitter', $userID); 
+	$facebook = get_the_author_meta('facebook', $userID);
+
+	if ( $twitter || $facebook ) :
+		$social  = '<ul class="list-inline">';
+		if ( $twitter ) {
+			$social .= '<li><a href="https://twitter.com/'.$twitter.'" target="_blank">Twitter</a></li>';
+		}
+	
+		if ( $facebook ) {
+			$social .= '<li>-</li>';
+			$social .= '<li><a href="https://facebook.com/'.$facebook.'" target="_blank">Facebook</a></li>';
+		}
+		$social .= '</ul>';
+		echo $social;
+	endif;
+}
