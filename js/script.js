@@ -1,5 +1,8 @@
 $(document).on('ready', function() {
 
+	/*----------------------------------------------------*/
+    /*  Contact Form
+    /*----------------------------------------------------*/
 	var ajaxUrl = 'wp-admin/admin-ajax.php';
 	var modal = $('#modalContact');
 	var form = $('#formContact');
@@ -75,3 +78,11 @@ $(document).on('ready', function() {
 	});
 
 });
+
+	/*----------------------------------------------------*/
+    /*  Masonry
+    /*----------------------------------------------------*/
+    var container = document.querySelector('#posts');
+    var msnry = new Masonry( container, {
+    	itemSelector: '.item'
+    });

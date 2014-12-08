@@ -26,7 +26,7 @@
     <!-- build:css css/main.css --> 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/base.css">
     <!-- endbuild -->
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
@@ -36,7 +36,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body <?php body_class( $class ); ?>>
     <header class="header" role="banner">
         <div class="container">
             <div class="nav-container">

@@ -76,7 +76,6 @@ function simple_menu_list( $menu_name ) {
         $menu_items = wp_get_nav_menu_items( $menu->term_id );
 
         $menu_list = '<ul class="nav navbar-nav nav-effect">';
-        $menu_list .= '<li><a href="/">Inicio</a></li>';
         foreach ( (array) $menu_items as $key => $menu_item ) {
             $title = $menu_item->title;
             $url = $menu_item->url;

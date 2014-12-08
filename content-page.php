@@ -9,9 +9,10 @@
 
 get_header(); ?>
 
-<article id="post-<?php the_ID(); ?>">
+<div class="row">
+	<h2><?php the_title(); ?></h2>
 	<?php the_content(); ?>
-</article>
+</div>
 
 <?php
 get_footer();

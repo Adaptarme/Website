@@ -25,6 +25,7 @@
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/jquery/dist/jquery.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/jquery-validation/dist/jquery.validate.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/masonry/dist/masonry.pkgd.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>
   <!-- endbuild -->
 </body>

@@ -38,13 +38,13 @@ get_header(); ?>
 	</div><!-- .b -->
 </aside><!-- .services -->
 
-<section class="row" role="main">
+<section class="clearfix row" role="main">
 	<h2 style="font-weight: 300; margin-bottom: 20px;" class="text-center">Descubre las últimas publicaciones</h2>
-	<div id="post" data-columns>
+	<div id="posts">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<article class="col-lg-4 post">
+		<div class="item col-md-4">
 			<?php get_template_part( 'content', get_post_format() ); ?>
-		</article>
+		</div>
 		<?php endwhile; endif; ?>
 	</div>
 </section>
