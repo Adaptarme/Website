@@ -42,9 +42,15 @@
             <div class="nav-container">
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                         <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" class="img-responsive" alt="Logo Adaptar.ME"></a></h1>
                     </div>
-                    <div class="collapse navbar-collapse pull-right">
+                    <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
                         <?php echo simple_menu_list( 'primary' ); ?>
                     </div>
                 </nav>

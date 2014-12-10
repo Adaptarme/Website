@@ -14,7 +14,7 @@ get_header(); ?>
 	<div class="services clearfix">
 		<div class="a">
 		<div class="tini"></div>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner1.jpg" class="img-responsive">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner2.jpg" class="img-responsive">
 			<div class="intro">
 				<h2>Hola.</h2>
 				<p class="lead">Somos un equipo de profesionales que se dedican al desarrollo de software y a la capacitación en las últimas tecnologías.</p>
@@ -40,11 +40,11 @@ get_header(); ?>
 		</div><!-- .services -->
 	</aside>
 
-	<section class="posts clearfix" role="main">
-			<h2 style="font-weight: 300; margin-bottom: 20px;" class="text-center">Descubre las últimas publicaciones</h2>
+	<section id="grid" class="posts clearfix" role="main">
+			<h2>Descubre las últimas publicaciones</h2>
 			<div id="posts">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<div class="item col-md-4">
+				<div class="post col-md-4">
 					<?php get_template_part( 'content', get_post_format() ); ?>
 				</div>
 				<?php endwhile; endif; ?>
