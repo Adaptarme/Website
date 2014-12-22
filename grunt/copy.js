@@ -9,6 +9,7 @@ module.exports = {
 			'./css',
 			'./fonts/*',
 			'./images/*',
+			'./inc/*',
 			'./page-templates/*',
 			'./partials/*',
 			'style.css'

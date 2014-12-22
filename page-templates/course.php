@@ -15,22 +15,24 @@ get_header(); ?>
 					<article>
 						<?php the_title( '<h2>', '</h2>' ); ?>
 						<div class="paragraphs">
-							<p><?php the_content(); ?></p>
+							<?php the_content(); ?>
 						</div>
 					</article>
 				<?php endwhile; ?>
 			<?php endif; ?>
-			<h3>Capítulos</h3>
+			<h3>Contenido del Curso</h3>
 			<hr />
 			<?php
-			$query = new WP_Query( array( 'course' => the_slug() ) );
+			$query = new WP_Query( array( 'curso' => the_slug( $post->ID ) ) );
 			?>
 			<?php if ( $query->have_posts() ) : ?>
+				<ul>
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-					<article class="videos">
+					<li>
 						<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
-					</article><!-- .videos -->
+					</li><!-- .videos -->
 				<?php endwhile; ?>
+				</ul>
 			<?php endif; ?>
 		</section>
 

@@ -162,95 +162,13 @@ function social_author( $userID ) {
 	endif;
 }
 
-/*
-// Register Custom Post Type
-function cursos_post_type() {
-
-	$labels = array(
-		'name'                => _x( 'Cursos', 'Post Type General Name', 'adaptarme' ),
-		'singular_name'       => _x( 'Curso', 'Post Type Singular Name', 'adaptarme' ),
-		'menu_name'           => __( 'Cursos', 'adaptarme' ),
-		'parent_item_colon'   => __( 'Parent Product:', 'adaptarme' ),
-		'all_items'           => __( 'Todos los Cursos', 'adaptarme' ),
-		'view_item'           => __( 'Ver Curso', 'adaptarme' ),
-		'add_new_item'        => __( 'Agrega Nuevo Curso', 'adaptarme' ),
-		'add_new'             => __( 'Añadir nuevo', 'adaptarme' ),
-		'edit_item'           => __( 'Editar Curso', 'adaptarme' ),
-		'update_item'         => __( 'Actualizar curso', 'adaptarme' ),
-		'search_items'        => __( 'Buscar cursos', 'adaptarme' ),
-		'not_found'           => __( 'No products found', 'adaptarme' ),
-		'not_found_in_trash'  => __( 'No products found in Trash', 'adaptarme' ),
-	);
-	$args = array(
-		'label'               => __( 'curso', 'adaptarme' ),
-		'description'         => __( 'Cursos information pages', 'adaptarme' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats' ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'menu_icon'           => 'dashicons-welcome-learn-more',
-		'can_export'          => true,
-		'has_archive'         => true,
-		'permalink_epmask'    => EP_WIKI,
-		'rewrite' => true,
-		//'rewrite' => array( 'slug' => 'curso', 'with_front' => true, 'feeds' => true ),
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
-	);
-	register_post_type( 'curso', $args );
-
-}
-// Hook into the 'init' action
-add_action( 'init', 'cursos_post_type', 0 );*/
-
-// Crear una taxonomy para los posts de los cursos.
-// @link http://codex.wordpress.org/Function_Reference/register_taxonomy
-function create_taxonomy_course() {
-
-	$labels = array(
-		'name'                       => _x( 'Cursos', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Curso', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Cursos', 'text_domain' ),
-		'all_items'                  => __( 'All Items', 'text_domain' ),
-		'parent_item'                => __( 'Parent Item', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Item', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Item', 'text_domain' ),
-		'update_item'                => __( 'Update Item', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
-		'search_items'               => __( 'Search Items', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used items', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => false,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-		'query_var'                  => true
-		//'rewrite'                    => array( 'slug' => __( 'curso', 'text_domain' ) )
-	);
-	register_taxonomy( 'course', array( 'post' ), $args );
-
-}
-add_action( 'init', 'create_taxonomy_course', 0 );
-
 // Función para obtener el slug de una entrada o página.
 // @link http://www.wprecipes.com/wordpress-function-to-get-postpage-slug
-function the_slug() {
-    $post_data = get_post( $post->ID, ARRAY_A );
+function the_slug( $id ) {
+    $post_data = get_post( $id, ARRAY_A );
     $slug = $post_data['post_name'];
     return $slug; 
 }
+
+require get_template_directory() . '/inc/custom-post-taxonomy-permalinks.php';
+require get_template_directory() . '/inc/meta-tag-head.php';

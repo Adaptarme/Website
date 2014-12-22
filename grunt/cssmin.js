@@ -7,7 +7,7 @@ module.exports = {
 			'../dist/css/main.css': [
 				'./libs/bootstrap/dist/css/bootstrap.css',
 				'./libs/font-awesome/css/font-awesome.css',
-				'./style.css'
+				'./css/base.css'
 				]
 		}
 	}

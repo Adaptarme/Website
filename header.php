@@ -18,10 +18,9 @@
 <!--<![endif]-->
 <head>
     <title><?php wp_title( '' ); ?></title>
-    <meta name="description" content="<?php echo get_bloginfo ( 'description' ); ?>">
+    <?php echo insert_metas_in_head(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500%7COpen+Sans:400,700,800%7CLato:400,700' rel='stylesheet' type='text/css'>
     <!-- build:css css/main.css --> 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/bootstrap/dist/css/bootstrap.css">
@@ -29,14 +28,14 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/base.css">
     <!-- endbuild -->
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico">
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
 </head>
 
-<body <?php body_class( $class ); ?>>
+<body <?php body_class(); ?>>
     <header class="header" role="banner">
         <div class="container">
             <div class="nav-container">
