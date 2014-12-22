@@ -7,7 +7,6 @@ module.exports = {
 			'./*.php',
 			'./*.png',
 			'./css',
-			'./fonts/*',
 			'./images/*',
 			'./inc/*',
 			'./page-templates/*',
