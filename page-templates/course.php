@@ -12,28 +12,21 @@ get_header(); ?>
 		<section class="col-md-8 clearfix" role="main">
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-					<article>
-						<?php the_title( '<h2>', '</h2>' ); ?>
-						<div class="paragraphs">
-							<?php the_content(); ?>
-						</div>
-					</article>
+					<?php get_template_part( 'partials/content', 'course' ); ?>
 				<?php endwhile; ?>
 			<?php endif; ?>
-			<h3>Contenido del Curso</h3>
-			<hr />
-			<?php
-			$query = new WP_Query( array( 'curso' => the_slug( $post->ID ) ) );
-			?>
-			<?php if ( $query->have_posts() ) : ?>
-				<ul>
-				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-					<li>
-						<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
-					</li><!-- .videos -->
-				<?php endwhile; ?>
-				</ul>
-			<?php endif; ?>
+			<aside>
+				<h4>Contenido del Curso</h4>
+				<hr />
+				<?php $query = new WP_Query( array( 'curso' => the_slug( $post->ID ) ) ); ?>
+				<?php if ( $query->have_posts() ) : ?>
+					<ul>
+					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+						<li><?php the_title( '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>' ); ?></li>
+					<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+			</aside>
 		</section>
 
 		<div class="col-md-4" role="complementary">

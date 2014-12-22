@@ -1,6 +1,6 @@
 <?php
 /**
- * La plantilla predeterminada para mostrar el contenido
+ * La plantilla predeterminada para mostrar el contenido.
  *
  * Se utiliza tanto para el single y el index/archive/search.
  *
@@ -15,7 +15,7 @@
 		<?php the_title( '<h2>', '</h2>' ); ?>
 		<div class="lead">
 			<?php the_excerpt(); ?>
-		</p>
+		</div>
 		<div class="paragraphs">
 			<?php the_content(); ?>
 		</div>

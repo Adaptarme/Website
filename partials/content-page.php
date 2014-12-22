@@ -9,9 +9,9 @@
 
 ?>
 
-	<article>
-		<h2><?php the_title(); ?></h2>
-		<div class="paragraphs">
-			<?php the_content(); ?>	
-		</div>
-	</article>
+<article>
+	<h2><?php the_title(); ?></h2>
+	<div class="paragraphs">
+		<?php the_content(); ?>	
+	</div>
+</article>
