@@ -32,6 +32,24 @@ endif; // adaptarme_setup
 add_action( 'after_setup_theme', 'adaptarme_setup' );
 
 /**
+ * Registrar tres áreas de widgets.
+ *
+ * @since Adaptar.ME 1.0
+ */
+function adaptarme_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Sidebar primaria', 'adaptarme' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Barra lateral principal que aparece a la izquierda.', 'adaptarme' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4><hr />',
+	) );
+}
+add_action( 'widgets_init', 'adaptarme_widgets_init' );
+
+/**
  * Crear un texto para el title con un formato agradable y más específico para 
  * la salida de la cabeza del documento, sobre la base de la vista actual.
  *
@@ -172,3 +190,4 @@ function the_slug( $id ) {
 
 require get_template_directory() . '/inc/custom-post-taxonomy-permalinks.php';
 require get_template_directory() . '/inc/meta-tag-head.php';
+require get_template_directory() . '/inc/widgets.php';

@@ -19,7 +19,7 @@ function insert_metas_in_head() {
 		  $metaTitle = get_bloginfo( 'name' );
 		  $metaType = 'website';
 		  $metaUrl = esc_url( home_url( '/' ) );
-		  $metaDescription = get_bloginfo( 'description' );
+		  $metaDescription = get_bloginfo( 'description', 'display' );
 	   } elseif ( is_single() OR is_page() ) {
 		  $metaTitle = get_the_title();
 		  $metaType = 'article';
@@ -27,7 +27,7 @@ function insert_metas_in_head() {
 		  $metaDescription = get_the_excerpt();
 	   }
 
-	   $metas = '<meta charset="' . $metaDescription . '">';
+	   $metas = '<meta charset="' . esc_html( $metaDescription ) . '">';
 
         // Un título claro y sin marca o indicando el dominio propio.
         $metas .= '<meta property="og:title" content="' . $metaTitle  . '">';
@@ -40,7 +40,7 @@ function insert_metas_in_head() {
         $metas .= '<meta property="og:url" content="' . $metaUrl . '">';
 
         // Una descripción clara, al menos dos frases largas.
-        $metas .= '<meta property="og:description" content="' . $metaDescription . '">';
+        $metas .= '<meta property="og:description" content="' . esc_html( $metaDescription ) . '">';
 
         // Comprobamos si el artículo tiene una imagen asociada.
         if ( has_post_thumbnail( $post->ID ) ) {
