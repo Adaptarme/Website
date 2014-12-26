@@ -1,6 +1,6 @@
 <?php
 /**
- * La plantilla para la visualización de las páginas 404 (Not Found)
+ * La plantilla para la visualización de las páginas 404.
  *
  * @package WordPress
  * @subpackage Adaptarme
@@ -10,6 +10,7 @@
 get_header(); ?>
 	
 <div class="row">
+
 	<div class="error col-md-8">
 		<h2>Ooops... Error 404</h2>
 		<h3>Lo sentimos, pero la página que busca no existe.</h3>
@@ -18,6 +19,11 @@ get_header(); ?>
 		<p>Por favor, siéntase libre de volver a la <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">página principal</a>
 		 	o utilizar el cuadro de búsqueda en la parte superior de la página para encontrar la información que estabas buscando. Sentimos mucho las molestias.</p>
 	</div><!-- .error -->
+
+	<div class="col-md-3">
+		<?php //get_sidebar( 'right' ); ?>
+	</div>
+
 </div><!-- .row -->
 
 <?php
