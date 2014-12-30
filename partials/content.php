@@ -25,6 +25,7 @@
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'large', array( 'class' => 'img-responsive' ) ); ?></a>
 			<?php endif; ?>
 			<div class="inner">
+				<h5 class="naranja"><?php echo the_taxonomy(); ?></h5> 
 				<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
 				<?php the_excerpt(); ?>
 			</div>

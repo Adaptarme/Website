@@ -188,6 +188,16 @@ function the_slug( $id ) {
     return $slug; 
 }
 
+function the_taxonomy() {
+	global $post;
+	$type_post = get_post_type( (int) $post->ID );
+	$taxonomy = wp_get_post_terms( (int) $post->ID, 'curso' );
+	if ( $type_post === 'tutorial' || ! isset( $taxonomy ) ) {
+		return '<a href="' . esc_url( home_url( $taxonomy[0]->slug ) ) . '" class="naranja">' . $taxonomy[0]->name . '</a>';
+		//return $taxonomy[0]->name;
+	}
+}
+
 require get_template_directory() . '/inc/custom-post-taxonomy-permalinks.php';
 require get_template_directory() . '/inc/meta-tag-head.php';
 require get_template_directory() . '/inc/widgets.php';

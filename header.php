@@ -47,7 +47,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" class="img-responsive" alt="Logo Adaptar.ME"></a></h1>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo Adaptar.ME"></a>
                     </div>
                     <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
                         <?php echo simple_menu_list( 'primary' ); ?>

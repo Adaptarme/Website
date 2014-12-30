@@ -33,6 +33,16 @@ get_header(); ?>
 		</section>
 
 		<div class="col-md-4">
+			<aside class="panel panel-default">
+			  <div class="panel-heading"><?php echo the_taxonomy(); ?></div>
+			  	<div class="panel-body">
+			  		<h5 class="list-group-item-heading">Introducción</h5>
+					<h5 class="list-group-item-heading">Instalar Ruby utilizando RVM</h5>
+					<h5 class="list-group-item-heading">Introducción</h5>
+					<h5 class="list-group-item-heading">Introducción</h5>
+				  </div>
+</div>
+			</aside>
 		</div>	
 	</div>
 

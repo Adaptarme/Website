@@ -26,6 +26,7 @@ get_header(); ?>
 					<?php endwhile; ?>
 					</ul>
 				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
 			</aside>
 		</section>
 
