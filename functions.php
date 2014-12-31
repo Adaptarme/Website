@@ -188,13 +188,19 @@ function the_slug( $id ) {
     return $slug; 
 }
 
-function the_taxonomy() {
+// Retorna el tipo de post
+function the_type_post() {
 	global $post;
 	$type_post = get_post_type( (int) $post->ID );
+	return $type_post;
+}
+
+// Retorna (name|slug) de la taxonomy
+function the_taxonomy( $return = 'name' ) {
+	global $post;
 	$taxonomy = wp_get_post_terms( (int) $post->ID, 'curso' );
-	if ( $type_post === 'tutorial' || ! isset( $taxonomy ) ) {
-		return '<a href="' . esc_url( home_url( $taxonomy[0]->slug ) ) . '" class="naranja">' . $taxonomy[0]->name . '</a>';
-		//return $taxonomy[0]->name;
+	if ( isset( $taxonomy ) ) {
+		return $taxonomy[0]->$return;
 	}
 }
 

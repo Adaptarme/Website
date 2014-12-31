@@ -33,16 +33,22 @@ get_header(); ?>
 		</section>
 
 		<div class="col-md-4">
+			<?php if ( the_type_post() === 'tutorial' ) : ?>
 			<aside class="panel panel-default">
-			  <div class="panel-heading"><?php echo the_taxonomy(); ?></div>
-			  	<div class="panel-body">
-			  		<h5 class="list-group-item-heading">Introducción</h5>
-					<h5 class="list-group-item-heading">Instalar Ruby utilizando RVM</h5>
-					<h5 class="list-group-item-heading">Introducción</h5>
-					<h5 class="list-group-item-heading">Introducción</h5>
-				  </div>
-</div>
+				<div class="panel-heading">
+					<h3 class="panel-title">Capítulos</h3>
+				</div>
+				<?php $query = new WP_Query( array( 'curso' => the_taxonomy( 'slug' ) ) ); ?>
+				<?php if ( $query->have_posts() ) : ?>
+					<ul class="list-group">
+					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+					<li class="list-group-item"><?php the_title( '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>' ); ?></li>
+					<?php endwhile; ?>
+					</ul>
+				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
 			</aside>
+			<?php endif; ?>
 		</div>	
 	</div>
 
