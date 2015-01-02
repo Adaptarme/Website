@@ -2,11 +2,13 @@
 /**
  * Usamos esta funcion para remover los widgets por defectos.
  *
- * @since Adaptar.ME 1.0
+ * @since Adaptar.ME 0.1.1
+ * 
+ * @link http://codex.wordpress.org/Function_Reference/unregister_widget 
  * 
  * @uses unregister_widget
  */
-function remover_widgets() {
+function adaptarme_remover_widgets() {
     unregister_widget( 'WP_Widget_Pages' );
     unregister_widget( 'WP_Widget_Calendar' );
     unregister_widget( 'WP_Widget_Archives' );
@@ -21,4 +23,4 @@ function remover_widgets() {
     unregister_widget( 'WP_Widget_Tag_Cloud' );
     //unregister_widget('WP_Nav_Menu_Widget');
 }
-add_action( 'widgets_init', 'remover_widgets' );
+add_action( 'widgets_init', 'adaptarme_remover_widgets' );

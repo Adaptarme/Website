@@ -128,7 +128,6 @@ jQuery(window).load(function () {
 		
 		}
 	}).trigger('resize');
-	
- 
+
  
 });

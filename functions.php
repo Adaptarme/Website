@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Adaptarme
- * @since Adaptar.ME 1.0
+ * @since Adaptar.ME 0.1.2
  */
 
 if ( ! function_exists( 'adaptarme_setup' ) ) :
@@ -13,8 +13,6 @@ if ( ! function_exists( 'adaptarme_setup' ) ) :
 	* 
 	* Configuración de los valores predeterminados del tema y los registros de
 	* soporte para diversas características de WordPress.
-	*
-	* @since Adaptar.ME 1.0
 	*/
 	function adaptarme_setup() {
         
@@ -34,7 +32,9 @@ add_action( 'after_setup_theme', 'adaptarme_setup' );
 /**
  * Registrar tres áreas de widgets.
  *
- * @since Adaptar.ME 1.0
+ * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ *
+ * @uses register_sidebar
  */
 function adaptarme_widgets_init() {
 	register_sidebar( array(
@@ -52,8 +52,6 @@ add_action( 'widgets_init', 'adaptarme_widgets_init' );
 /**
  * Crear un texto para el title con un formato agradable y más específico para 
  * la salida de la cabeza del documento, sobre la base de la vista actual.
- *
- * @since Adaptarme 1.0
  * 
  * @param string $title Titulo de la página.
  * @return string El título filtrado.
@@ -76,7 +74,6 @@ add_filter( 'wp_title', 'adaptarme_wp_title', 10, 2 );
 /**
  * Crear un menu personalizado.
  *
- * @since Adaptarme 1.0
  * @link http://codex.wordpress.org/Function_Reference/wp_get_nav_menu_items#Building_simple_menu_list
  * 
  * @uses get_nav_menu_locations
@@ -108,8 +105,6 @@ function simple_menu_list( $menu_name ) {
 
 /**
  * Funcion para enviar el email de contacto.
- *
- * @since Adaptarme 1.0
  * 
  * @uses str_replace
  * @uses phpversion
@@ -118,11 +113,11 @@ function simple_menu_list( $menu_name ) {
  * @return string Mensaje para el usuario que envio el email
  */
 function send_email_contact() {
-	$name = $_POST['name'];
-	$email = $_POST['email'];
+	$name    = $_POST['name'];
+	$email   = $_POST['email'];
 	$content = $_POST['content'];
 
-	if ( $name !== '' && $email !== '' ) :
+	if ( $name !== '' && $email !== '' ) {
 		$to = get_bloginfo( 'admin_email' ); // Destinatario/s del correo.
 		$subject = $name; // Título del correo electrónico a enviar.
 		$message = str_replace( "\n.", "\n..", $content );
@@ -131,7 +126,7 @@ function send_email_contact() {
 				   'X-Mailer: PHP/' . phpversion();
 		if ( mail( $to, $subject, $message, $headers ) ) // Enviar correo
 			echo '<strong>Felicidades</strong> , tu mensaje fue enviado! :)';
-	endif;
+	}
 	
 	die(); // detener la ejecución del script
 }
@@ -139,27 +134,33 @@ add_action( 'wp_ajax_send_email', 'send_email_contact' ); // ajax para los usuar
 add_action( 'wp_ajax_nopriv_send_email', 'send_email_contact' ); // ajax for not logged in users
 
 
-// Modificar el ancho y alto del iframe
-function bigger_embed_size() { 
-	return array( 'width' => 570, 'height' => 321 );
+/**
+ * Modificar el ancho y alto del iframe.
+ */
+function adaptarme_embed_size() { 
+	return array( 'width' => 637, 'height' => 358 );
 }
-add_filter( 'embed_defaults', 'bigger_embed_size' );
+add_filter( 'embed_defaults', 'adaptarme_embed_size' );
 
 /**
  * Agregamos campos en el perfil del usuarios para las redes sociales.
  */
-function modify_user_contact_methods( $user_contact ) {
+function adaptarme_user_contact( $user_contact ) {
 
-	/* Add user contact methods */
+	// Añadir métodos de contacto del usuario
 	$user_contact['facebook'] = __('Facebook'); 
 	$user_contact['twitter'] = __('Twitter');
 
 	return $user_contact;
 }
-add_filter('user_contactmethods', 'modify_user_contact_methods');
+add_filter( 'user_contactmethods', 'adaptarme_user_contact' );
 
 /**
  * Función para mostrar una lista con las redes sociales del autor.
+ *
+ * @uses get_the_author_meta
+ *
+ * @return string Id del usuario
  */
 function social_author( $userID ) {
 	$twitter = get_the_author_meta('twitter', $userID); 
@@ -168,34 +169,46 @@ function social_author( $userID ) {
 	if ( $twitter || $facebook ) :
 		$social  = '<ul class="list-inline">';
 		if ( $twitter ) {
-			$social .= '<li><a href="https://twitter.com/'.$twitter.'" target="_blank">Twitter</a></li>';
+			$social .= '<li><a href="https://twitter.com/${twitter}" target="_blank">Twitter</a></li>';
 		}
 	
 		if ( $facebook ) {
 			$social .= '<li>-</li>';
-			$social .= '<li><a href="https://facebook.com/'.$facebook.'" target="_blank">Facebook</a></li>';
+			$social .= '<li><a href="https://facebook.com/${facebook}" target="_blank">Facebook</a></li>';
 		}
 		$social .= '</ul>';
 		echo $social;
 	endif;
 }
 
-// Función para obtener el slug de una entrada o página.
-// @link http://www.wprecipes.com/wordpress-function-to-get-postpage-slug
-function the_slug( $id ) {
-    $post_data = get_post( $id, ARRAY_A );
+/**
+ * Función para obtener el slug de una entrada o página.
+ * @link http://www.wprecipes.com/wordpress-function-to-get-postpage-slug
+ *
+ * @uses get_post
+ */
+function the_slug( $potsId ) {
+    $post_data = get_post( $potsId, ARRAY_A );
     $slug = $post_data['post_name'];
     return $slug; 
 }
 
-// Retorna el tipo de post
+/**
+ * Retorna el tipo de post.
+ *
+ * @uses get_post_type
+ */
 function the_type_post() {
 	global $post;
 	$type_post = get_post_type( (int) $post->ID );
 	return $type_post;
 }
 
-// Retorna (name|slug) de la taxonomy
+/**
+ * Retorna (name|slug) de la taxonomy.
+ *
+ * @uses wp_get_post_terms
+ */
 function the_taxonomy( $return = 'name' ) {
 	global $post;
 	$taxonomy = wp_get_post_terms( (int) $post->ID, 'curso' );
@@ -204,8 +217,83 @@ function the_taxonomy( $return = 'name' ) {
 	}
 }
 
+/**
+ * Insertamos los metas en el head.
+ *
+ * @uses get_bloginfo
+ * @uses is_home
+ * @uses esc_url
+ * @uses is_single
+ * @uses is_page
+ * @uses get_the_title
+ * @uses get_permalink
+ * @uses get_the_title
+ * @uses esc_html
+ * @uses has_post_thumbnail
+ * @uses get_post_thumbnail_id
+ * @uses wp_get_attachment_image_src
+ * 
+ * @return string Los metas.
+ */
+function insert_metas_in_head() {
+
+    $metas = '';
+    
+    if ( ! is_404() ) : // No hacer nada si es un error 404
+	   
+       global $post;
+
+	   $metaSiteName = get_bloginfo( 'name' );
+
+	   if ( is_home() ) {
+		  $metaTitle = get_bloginfo( 'name' );
+		  $metaType = 'website';
+		  $metaUrl = esc_url( home_url( '/' ) );
+		  $metaDescription = get_bloginfo( 'description', 'display' );
+	   } elseif ( is_single() OR is_page() ) {
+		  $metaTitle = get_the_title();
+		  $metaType = 'article';
+		  $metaUrl = get_permalink( $post->ID );
+		  $metaDescription = get_the_excerpt();
+	   }
+
+	   $metas = '<meta charset="' . esc_html( $metaDescription ) . '">';
+
+        // Un título claro y sin marca o indicando el dominio propio.
+        $metas .= '<meta property="og:title" content="' . $metaTitle  . '">';
+
+        // Un nombre del sitio
+        $metas .= '<meta property="og:site_name" content="' . $metaSiteName . '">';
+
+        // Una URL sin identificador de sesión o parámetros externos.
+        // La URL de identificación para este artículo.
+        $metas .= '<meta property="og:url" content="' . $metaUrl . '">';
+
+        // Una descripción clara, al menos dos frases largas.
+        $metas .= '<meta property="og:description" content="' . esc_html( $metaDescription ) . '">';
+
+        // Comprobamos si el artículo tiene una imagen asociada.
+        if ( has_post_thumbnail( $post->ID ) ) {
+            // Utilice imágenes que son al menos 1200 x 630 píxeles para
+            // la mejor visualización en dispositivos de alta resolución.
+            $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
+            $image_attributes = wp_get_attachment_image_src( $post_thumbnail_id, 'full' );
+       	    // Esta es una imagen genérica que se verá el mismo para todas las historias.
+       	    $metas .= '<meta property="og:image" content="' . $image_attributes[0] . '">';
+        }
+
+        // El tipo de objeto.
+        $metas .= '<meta property="og:type" content="' . $metaType . '">';
+
+        // ID que identifica a su página de Facebook.
+        $metas .= '<meta property="fb:app_id" content="131615976988772">';
+    
+    endif;
+    
+    return $metas;
+}
+
 require get_template_directory() . '/inc/post-types.php';
 require get_template_directory() . '/inc/taxonomies.php';
 require get_template_directory() . '/inc/permalinks.php';
-require get_template_directory() . '/inc/meta-tag-head.php';
 require get_template_directory() . '/inc/widgets.php';

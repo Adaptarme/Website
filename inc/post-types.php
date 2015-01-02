@@ -1,14 +1,18 @@
 <?php
-
-add_action( 'init', 'register_my_types' );
-
-function register_my_types() {
+/**
+ * Insertamos los metas en el head.
+ * 
+ * @since Adaptar.ME 0.1.2
+ * 
+ * @uses register_post_type
+ */
+function adaptarme_register_my_types() {
 
 	$labels = array(
-		'name'				=> __( 'Tutoriales', 'adaptarme' ),
-		'singular_name' 	=> __( 'Tutorial', 'adaptarme' ),
-		'menu_name'			=> __( 'Tutoriales', 'adaptarme' ),
-		'name_admin_bar'	=> __( 'Tutorial', 'adaptarme' )
+		'name'			 => __( 'Tutoriales', 'adaptarme' ),
+		'singular_name'  => __( 'Tutorial', 'adaptarme' ),
+		'menu_name'		 => __( 'Tutoriales', 'adaptarme' ),
+		'name_admin_bar' => __( 'Tutorial', 'adaptarme' )
 		);
 
 	register_post_type( 'tutorial',
@@ -19,7 +23,7 @@ function register_my_types() {
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => true, //array( 'slug' => 'book' ),
+			'rewrite'            => true,
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -30,3 +34,4 @@ function register_my_types() {
 	);
 
 }
+add_action( 'init', 'adaptarme_register_my_types' );
