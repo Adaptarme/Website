@@ -13,50 +13,9 @@ Single Recipe Pages:
  - http://example.com/recipes/breakfast,brunch/egg-dish-title/
 
 */
-
-// Se ejecuta después de WordPress ha terminado de cargar,
-// pero antes de que se envíen los encabezados.
-add_action( 'init', 'register_my_types' );
-
-function register_my_types() {
-
-	// recipes => capitulos
-	register_post_type( 'tutorial',
-		array(
-			'labels' => array(
-				'name' => __( 'Tutoriales' ),
-				'singular_name' => __( 'Tutorial' )
-			),
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'query_var'          => true,
-			'rewrite'            => true, //array( 'slug' => 'book' ),
-			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
-			'menu_position'      => 5,
-			'menu_icon'          => 'dashicons-welcome-learn-more',
-			'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions' )
-		)
-	);
-
-	// occasion => curso
-	register_taxonomy( 'curso', array( 'tutorial' ), array( 
-			'hierarchical' 			=> true, 
-			'label' 				=> 'Cursos',
-			'show_ui'               => true,
-			'show_admin_column'     => true,
-			'update_count_callback' => '_update_post_term_count',
-			'query_var'             => true
-		)
-	);
-}
-
+ 
 // Add our custom permastructures for custom taxonomy and post
 add_action( 'wp_loaded', 'add_clinic_permastructure' );
-
 function add_clinic_permastructure() {
 	global $wp_rewrite;
 

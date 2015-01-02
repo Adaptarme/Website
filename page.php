@@ -2,7 +2,7 @@
 get_header(); ?>
 
 <div class="row">
-	<section class="col-md-8" role="main">
+	<section class="col-md-8 clearfix" role="main">
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'partials/content', 'page' ); ?>

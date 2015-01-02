@@ -204,6 +204,8 @@ function the_taxonomy( $return = 'name' ) {
 	}
 }
 
-require get_template_directory() . '/inc/custom-post-taxonomy-permalinks.php';
+require get_template_directory() . '/inc/post-types.php';
+require get_template_directory() . '/inc/taxonomies.php';
+require get_template_directory() . '/inc/permalinks.php';
 require get_template_directory() . '/inc/meta-tag-head.php';
 require get_template_directory() . '/inc/widgets.php';

@@ -160,9 +160,11 @@ img.size-large,
 .nav > li { margin-left: 35px; cursor: pointer; }
 .nav > li:last-child { border-radius: 4px; }
 
-/* Home
+
+.home { background-color: #eeeeee; }
+
+/* Services
 =================================================*/
-.home { background-color: #f8f8f8; }
 .services {
   background-color: #ffffff;
   border: 1px solid #e6e6e6;
@@ -215,6 +217,9 @@ img.size-large,
 }
 .services-plus .lead { margin-bottom: 0; }
 .services .b img { margin: 15px auto 0; }
+
+/* Posts
+=================================================*/
 .home .posts h2 {
   font-weight: 300;
   margin-bottom: 20px;
@@ -237,9 +242,17 @@ img.size-large,
 .single section {
   background-color: #ffffff;
 }
-.single h2 { margin-top: 0px; }
-.single .author { background-color: #f8f8f8; /*padding-bottom: 12px;*/ margin-bottom: 15px; }
-img.avatar { border-radius: 50%; margin-top: 12px; }
+.single h2 {
+  margin-top: 0px;
+}
+.single .author {
+  background-color: #f8f8f8;
+  margin-bottom: 15px;
+}
+img.avatar {
+  border-radius: 50%;
+  margin-top: 12px;
+}
 .paragraphs {
   color: #333333;
   font-size: 16px;
@@ -254,17 +267,35 @@ img.avatar { border-radius: 50%; margin-top: 12px; }
   -webkit-margin-end: 0px;
   margin-top: 0;
 }
-.paragraphs p { margin-bottom: 20px; }
-.visto a { color: #CCCCCC; }
-
+.paragraphs p {
+  margin-bottom: 20px;
+}
+.visto a {
+  color: #cccccc;
+}
 
 /* Page
 =================================================*/
-.page { background-color: #f8f8f8; }
-.page section { background-color: #ffffff; padding-bottom: 20px; }
-.page .author img { float: right; margin-top: 0; margin-left: 10px; }
-.videos { background-color: #edf8fc; padding: 10px; margin-bottom: 15px; }
-.page-template-full-width { background-color: #ffffff; }
+.page {
+  background-color: #eeeeee;
+}
+.page section {
+  background-color: #ffffff;
+  padding-bottom: 20px;
+}
+.page .author img {
+  float: right;
+  margin-top: 0;
+  margin-left: 10px;
+}
+.videos {
+  background-color: #edf8fc;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.page-template-full-width {
+  background-color: #ffffff;
+}
 
 /* Class
 =================================================*/
