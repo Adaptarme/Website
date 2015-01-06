@@ -10,6 +10,7 @@ module.exports = {
 					'./libs/jquery/dist/jquery.js',
 					'./libs/jquery-validation/dist/jquery.validate.js',
 					'./libs/bootstrap/dist/js/bootstrap.js',
+					'./libs/masonry/dist/masonry.pkgd.js',
 					'./js/script.js'
 					]
 			}

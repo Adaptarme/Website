@@ -3,6 +3,10 @@
  */
 module.exports = {
 	generated: {
+		options: {
+			sourceMap: true,
+			sourceMapName: '../dist/js/main.map'
+		},
 		files: [
 			{
 				dest: '../dist/js/main.js',
