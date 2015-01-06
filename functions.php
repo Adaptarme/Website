@@ -90,15 +90,15 @@ function simple_menu_list( $menu_name ) {
         // Devuelve un objeto del menú de navegación.
         $menu_items = wp_get_nav_menu_items( $menu->term_id );
 
-        $menu_list = '<ul class="nav navbar-nav nav-effect">';
+        $menu_list = "<ul class=\"nav navbar-nav nav-effect\">\r\n";
         foreach ( (array) $menu_items as $key => $menu_item ) {
             $title = $menu_item->title;
             $url = $menu_item->url;
-            $menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
+            $menu_list .= "<li><a href=\"${url}\">${title}</a></li>\r\n";
         }
         
-        $menu_list .= '<li><a href="#" data-toggle="modal" data-target="#modalContact">Contacto</a></li>';
-        $menu_list .= '</ul>';
+        $menu_list .= "<li><a href=\"#\" data-toggle=\"modal\" data-target=\"#modalContact\">Contacto</a></li>\r\n";
+        $menu_list .= "</ul>\r\n";
     }
     return $menu_list;
 }
@@ -121,9 +121,9 @@ function send_email_contact() {
 		$to = get_bloginfo( 'admin_email' ); // Destinatario/s del correo.
 		$subject = $name; // Título del correo electrónico a enviar.
 		$message = str_replace( "\n.", "\n..", $content );
-		$headers = 'From: ' . $email . "\r\n" .
-				   'Reply-To: ' . $email . "\r\n" .
-				   'X-Mailer: PHP/' . phpversion();
+		$headers = "From: ${email}\r\n" .
+				   "Reply-To: ${email}\r\n" .
+				   "X-Mailer: PHP/" . phpversion();
 		if ( mail( $to, $subject, $message, $headers ) ) // Enviar correo
 			echo '<strong>Felicidades</strong> , tu mensaje fue enviado! :)';
 	}
@@ -167,16 +167,16 @@ function social_author( $userID ) {
 	$facebook = get_the_author_meta('facebook', $userID);
 
 	if ( $twitter || $facebook ) :
-		$social  = '<ul class="list-inline">';
+		$social  = "<ul class=\"list-inline\">\r\n";
 		if ( $twitter ) {
-			$social .= '<li><a href="https://twitter.com/${twitter}" target="_blank">Twitter</a></li>';
+			$social .= "<li><a href=\"https://twitter.com/${twitter}\" target=\"_blank\">Twitter</a></li>\r\n";
 		}
 	
 		if ( $facebook ) {
-			$social .= '<li>-</li>';
-			$social .= '<li><a href="https://facebook.com/${facebook}" target="_blank">Facebook</a></li>';
+			$social .= "<li>-</li>\r\n";
+			$social .= "<li><a href=\"https://facebook.com/${facebook}\" target=\"_blank\">Facebook</a></li>\r\n";
 		}
-		$social .= '</ul>';
+		$social .= "</ul>\r\n";
 		echo $social;
 	endif;
 }
@@ -222,13 +222,12 @@ function the_taxonomy( $return = 'name' ) {
  *
  * @uses get_bloginfo
  * @uses is_home
- * @uses esc_url
  * @uses is_single
  * @uses is_page
  * @uses get_the_title
  * @uses get_permalink
  * @uses get_the_title
- * @uses esc_html
+ * @uses esc_url
  * @uses has_post_thumbnail
  * @uses get_post_thumbnail_id
  * @uses wp_get_attachment_image_src
@@ -258,20 +257,20 @@ function insert_metas_in_head() {
     	}
 
     	// Meta description
-    	$metas = '<meta name="description" content="' . esc_html( $metaDescription ) . '">';
+    	$metas = "<meta name=\"description\" content=\"${metaDescription}\">\r\n";
 
         // Un título claro y sin marca o indicando el dominio propio.
-        $metas .= '<meta property="og:title" content="' . $metaTitle  . '">';
+        $metas .= "<meta property=\"og:title\" content=\"${metaTitle}\">\r\n";
 
         // Un nombre del sitio
-        $metas .= '<meta property="og:site_name" content="' . $metaSiteName . '">';
+        $metas .= "<meta property=\"og:site_name\" content=\"${metaSiteName}\">\r\n";
 
         // Una URL sin identificador de sesión o parámetros externos.
         // La URL de identificación para este artículo.
-        $metas .= '<meta property="og:url" content="' . $metaUrl . '">';
+        $metas .= "<meta property=\"og:url\" content=\"${metaUrl}\">\r\n";
 
         // Una descripción clara, al menos dos frases largas.
-        $metas .= '<meta property="og:description" content="' . esc_html( $metaDescription ) . '">';
+        $metas .= "<meta property=\"og:description\" content=\"${metaDescription}\">\r\n";
 
         // Comprobamos si el artículo tiene una imagen asociada.
         if ( has_post_thumbnail( $post->ID ) ) {
@@ -280,14 +279,14 @@ function insert_metas_in_head() {
             $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
             $image_attributes = wp_get_attachment_image_src( $post_thumbnail_id, 'full' );
        	    // Esta es una imagen genérica que se verá el mismo para todas las historias.
-       	    $metas .= '<meta property="og:image" content="' . $image_attributes[0] . '">';
+       	    $metas .= "<meta property=\"og:image\" content=\"${image_attributes[0]}\">\r\n";
         }
 
         // El tipo de objeto.
-        $metas .= '<meta property="og:type" content="' . $metaType . '">';
+        $metas .= "<meta property=\"og:type\" content=\"${metaType}\">\r\n";
 
         // ID que identifica a su página de Facebook.
-        $metas .= '<meta property="fb:app_id" content="131615976988772">';
+        $metas .= "<meta property=\"fb:app_id\" content=\"131615976988772\">\r\n";
     
     endif;
     
