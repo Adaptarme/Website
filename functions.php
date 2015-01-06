@@ -97,7 +97,7 @@ function simple_menu_list( $menu_name ) {
             $menu_list .= "<li><a href=\"${url}\">${title}</a></li>\r\n";
         }
         
-        $menu_list .= "<li><a href=\"#\" data-toggle=\"modal\" data-target=\"#modalContact\">Contacto</a></li>\r\n";
+        $menu_list .= "<li><a data-toggle=\"modal\" href=\"".get_stylesheet_directory_uri()."/partials/modal-contact.html\" data-target=\"#modal\">Contacto</a></li>\r\n";
         $menu_list .= "</ul>\r\n";
     }
     return $menu_list;

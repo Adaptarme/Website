@@ -2,12 +2,11 @@
  
 jQuery(window).load(function () {
 
-
 	/*----------------------------------------------------*/
     /*  Contact Form
     /*----------------------------------------------------*/
 	var ajaxUrl = 'wp-admin/admin-ajax.php';
-	var modal = $('#modalContact');
+	var modal = $('#modal');
 	var form = $('#formContact');
 	var sendEmail = $('#sendEmail');
 
