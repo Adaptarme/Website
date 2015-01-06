@@ -240,24 +240,25 @@ function insert_metas_in_head() {
     $metas = '';
     
     if ( ! is_404() ) : // No hacer nada si es un error 404
-	   
-       global $post;
 
-	   $metaSiteName = get_bloginfo( 'name' );
+    	global $post;
 
-	   if ( is_home() ) {
-		  $metaTitle = get_bloginfo( 'name' );
-		  $metaType = 'website';
-		  $metaUrl = esc_url( home_url( '/' ) );
-		  $metaDescription = get_bloginfo( 'description', 'display' );
-	   } elseif ( is_single() OR is_page() ) {
-		  $metaTitle = get_the_title();
-		  $metaType = 'article';
-		  $metaUrl = get_permalink( $post->ID );
-		  $metaDescription = get_the_excerpt();
-	   }
+    	$metaSiteName = get_bloginfo( 'name' );
 
-	   $metas = '<meta charset="' . esc_html( $metaDescription ) . '">';
+    	if ( is_home() ) {
+    		$metaTitle = get_bloginfo( 'name' );
+    		$metaType = 'website';
+    		$metaUrl = esc_url( home_url( '/' ) );
+    		$metaDescription = get_bloginfo( 'description', 'display' );
+    	} elseif ( is_single() OR is_page() ) {
+    		$metaTitle = get_the_title();
+    		$metaType = 'article';
+    		$metaUrl = get_permalink( $post->ID );
+    		$metaDescription = get_the_excerpt();
+    	}
+
+    	// Meta description
+    	$metas = '<meta name="description" content="' . esc_html( $metaDescription ) . '">';
 
         // Un título claro y sin marca o indicando el dominio propio.
         $metas .= '<meta property="og:title" content="' . $metaTitle  . '">';
