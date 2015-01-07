@@ -4,7 +4,7 @@
 module.exports = {
 	html: {
 		src: [
-			'.htaccess'
+			'.htaccess',
 			'./*.php',
 			'./screenshot.png',
 			'./css/*',
