@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Adaptarme
- * @since Adaptar.ME 0.1.2
+ * @since Adaptar.ME 0.1.5
  */
 
 if ( ! function_exists( 'adaptarme_setup' ) ) :
@@ -15,15 +15,19 @@ if ( ! function_exists( 'adaptarme_setup' ) ) :
 	* soporte para diversas características de WordPress.
 	*/
 	function adaptarme_setup() {
+
+		/*
+		 * Habilitar la compatibilidad con Post Thumbnails.
+		 *
+		 * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		 */
+		add_theme_support( 'post-thumbnails' );
         
         // Este tema utiliza wp_nav_menu().
         register_nav_menus( array( 
             'primary'   => 'Menú principal',
             'secondary' => 'Menú secundario',
             ) );
-
-		// Habilitar la compatibilidad con Post Thumbnails.
-		add_theme_support( 'post-thumbnails' );
 	
     }
 endif; // adaptarme_setup

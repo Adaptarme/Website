@@ -11,21 +11,19 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>">
+
 	<?php if ( is_single() || is_category() || is_archive() ) : ?>
 		<?php if ( the_type_post() === 'tutorial' ) : ?>
 		<h4 class="naranja"><?php echo the_taxonomy( 'name' ); ?></h4>
 		<?php endif; ?> 
 		<?php the_title( '<h2>', '</h2>' ); ?>
-		<!--<div class="lead">
-			<?php //the_excerpt(); ?>
-		</div>-->
 		<div class="paragraphs">
 			<?php the_content(); ?>
 		</div>
 	<?php else : ?>
 		<div class="views-row">
 			<?php if ( has_post_thumbnail()) : ?>
-				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'large', array( 'class' => 'img-responsive' ) ); ?></a>
+				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'medium', array( 'class' => 'img-responsive' ) ); ?></a>
 			<?php endif; ?>
 			<div class="inner">
 				<?php if ( the_type_post() === 'tutorial' ) : ?>
@@ -36,4 +34,5 @@
 			</div>
 		</div>
 	<?php endif; ?>
+	
 </article>
