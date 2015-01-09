@@ -22,7 +22,7 @@ function adaptarme_register_my_types() {
 	 * Una matriz con los argumentos para configurar el post types.
 	 */
 	$args = array(
-		'label'			     => __( 'Tutoriales', 'adaptarme' ), // Un nombre descriptivo plural
+		'label'			     => __( 'Tutoriales', 'adaptarme' ),
 		'labels' 			 => $labels,
 		'public'             => true,
 		'publicly_queryable' => true,
