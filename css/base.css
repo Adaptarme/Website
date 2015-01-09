@@ -316,7 +316,7 @@ Header
 Modal
 */
 .modal-backdrop {
-  background-color: #FFFFFF;
+  background-color: #444444;
 }
 .modal-content {
   border-radius: 0;
