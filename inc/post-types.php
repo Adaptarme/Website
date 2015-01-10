@@ -36,7 +36,7 @@ function adaptarme_register_my_types() {
 		'has_archive'        => true,
 		'taxonomies'         => array( 'post_tag' ),
 		'hierarchical' 		 => false,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' )
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
 	);
 
 	/**

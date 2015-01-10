@@ -301,3 +301,10 @@ require get_template_directory() . '/inc/post-types.php';
 require get_template_directory() . '/inc/taxonomies.php';
 require get_template_directory() . '/inc/permalinks.php';
 require get_template_directory() . '/inc/widgets.php';
+
+/**
+ * Tags personalizados para este tema.
+ *
+ * @since Adaptar.ME 0.2.0
+ */
+require get_template_directory() . '/inc/template-tags.php';
