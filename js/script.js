@@ -1,6 +1,4 @@
-// Load is used to ensure all images have been loaded, impossible with document
-
-jQuery(window).load(function () {
+$(document).ready(function (){
 
 	/*----------------------------------------------------*/
 	/*  Contact Form
@@ -80,7 +78,9 @@ jQuery(window).load(function () {
 		});
 	});
 
-	// Masonry ***********************************************
+	/*----------------------------------------------------*/
+	/*  Masonry
+	/*----------------------------------------------------*/
 	
 	// Takes the gutter width from the bottom margin of .post
 	var gutter = parseInt( $('.post').css('marginBottom') );
@@ -119,5 +119,10 @@ jQuery(window).load(function () {
 		}
 
 	}).trigger('resize');
+
+	/*----------------------------------------------------*/
+	/*  FitVids.js
+	/*----------------------------------------------------*/
+	$("article").fitVids({ customSelector: "iframe"});
 
 });

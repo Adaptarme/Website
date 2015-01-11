@@ -26,6 +26,7 @@
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/jquery-validation/dist/jquery.validate.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/bootstrap/dist/js/bootstrap.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/masonry/dist/masonry.pkgd.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/fitvids/jquery.fitvids.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/prismjs/prism.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/prismjs/components/prism-css.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/prismjs/components/prism-javascript.js"></script>

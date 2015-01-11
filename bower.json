@@ -9,6 +9,7 @@
     "font-awesome": "~4.2.0",
     "jquery-validation": "~1.13.1",
     "masonry": "~3.2.1",
-    "prismjs": "*"
+    "prismjs": "*",
+    "fitvids": "~1.1.0"
   }
 }

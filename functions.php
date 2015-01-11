@@ -137,15 +137,6 @@ function send_email_contact() {
 add_action( 'wp_ajax_send_email', 'send_email_contact' ); // ajax para los usuarios registrados
 add_action( 'wp_ajax_nopriv_send_email', 'send_email_contact' ); // ajax for not logged in users
 
-
-/**
- * Modificar el ancho y alto del iframe.
- */
-function adaptarme_embed_size() { 
-	return array( 'width' => 637, 'height' => 358 );
-}
-add_filter( 'embed_defaults', 'adaptarme_embed_size' );
-
 /**
  * Agregamos campos en el perfil del usuarios para las redes sociales.
  */
