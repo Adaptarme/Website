@@ -21,10 +21,11 @@
     <?php echo insert_metas_in_head(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500%7COpen+Sans:400,700,800%7CLato:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800%7CLato:400,700' rel='stylesheet' type='text/css'>
     <!-- build:css css/main.css --> 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/libs/prismjs/prism.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/base.css">
     <!-- endbuild -->
     <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -40,6 +41,9 @@
         <div class="container">
             <div class="nav-container">
                 <nav class="navbar navbar-default" role="navigation">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" rel="home">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" class="img-responsive" width="250" height="45" alt="Logo Adaptar.ME" />
+                    </a>
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
@@ -47,7 +51,6 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" width="250" height="45" alt="Logo Adaptar.ME"></a>
                     </div>
                     <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
                         <?php echo simple_menu_list( 'primary' ); ?>

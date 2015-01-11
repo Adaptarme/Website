@@ -30,9 +30,16 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 p a:hover { text-decoration: underline; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Raleway', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Loto', sans-serif; }
 h4 a { color: #0072cf; }
 h4 a:hover { color: #263845; }
+pre {
+  border: none;
+  border-radius: 0px;
+}
+pre[class*="language-"] {
+  margin: -10px 0 20px 0;
+}
 
 /* Container
 =================================================*/
