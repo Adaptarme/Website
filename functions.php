@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Adaptarme
- * @since Adaptar.ME 0.1.5
+ * @since Adaptar.ME 0.2.0
  */
 
 if ( ! function_exists( 'adaptarme_setup' ) ) :
@@ -16,21 +16,18 @@ if ( ! function_exists( 'adaptarme_setup' ) ) :
 	*/
 	function adaptarme_setup() {
 
-		/*
-		 * Habilitar la compatibilidad con Post Thumbnails.
-		 *
-		 * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-		 */
+		//Habilitar la compatibilidad con Post Thumbnails.
 		add_theme_support( 'post-thumbnails' );
         
         // Este tema utiliza wp_nav_menu().
         register_nav_menus( array( 
-            'primary'   => 'Menú principal',
-            'secondary' => 'Menú secundario',
-            ) );
+            'primary'   => __( 'Menú cabecera', 'adaptarme' ),
+            'secondary' => __( 'Menú pie', 'adaptarme' ),
+            )
+        );
 	
     }
-endif; // adaptarme_setup
+endif;
 add_action( 'after_setup_theme', 'adaptarme_setup' );
 
 /**
@@ -56,19 +53,22 @@ add_action( 'widgets_init', 'adaptarme_widgets_init' );
 /**
  * Crear un texto para el title con un formato agradable y más específico para 
  * la salida de la cabeza del documento, sobre la base de la vista actual.
- * 
+ *
+ * @link http://codex.wordpress.org/Function_Reference/wp_title 
+ *
  * @param string $title Titulo de la página.
+ * @param string $sep Separador opcional.
  * @return string El título filtrado.
  */
-function adaptarme_wp_title( $title ) {
+function adaptarme_wp_title( $title,  $sep  ) {
 	global $paged, $page;
 
-	if ( is_feed() || is_home() || is_front_page() ) {
-		return	get_bloginfo( 'name', 'display' );
+	if( empty( $title ) && ( is_home() || is_front_page() ) ) {
+		$title = get_bloginfo( 'name', 'display' );
 	}
 
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title / " . sprintf( __( 'Página %s', 'adaptarme' ), max( $paged, $page ) );
+		$title = "${title} / " . sprintf( __( 'Página %s', 'adaptarme' ), max( $paged, $page ) );
 	}
 	
 	return trim( $title );
@@ -122,7 +122,7 @@ function send_email_contact() {
 	$content = $_POST['content'];
 
 	if ( $name !== '' && $email !== '' ) {
-		$to = get_bloginfo( 'admin_email' ); // Destinatario/s del correo.
+		$to = get_bloginfo( 'admin_email', 'raw' ); // Destinatario/s del correo.
 		$subject = $name; // Título del correo electrónico a enviar.
 		$message = str_replace( "\n.", "\n..", $content );
 		$headers = "From: ${email}\r\n" .
@@ -178,9 +178,11 @@ function social_author( $userID ) {
 
 /**
  * Función para obtener el slug de una entrada o página.
+ *
  * @link http://www.wprecipes.com/wordpress-function-to-get-postpage-slug
  *
  * @uses get_post
+ * @return string Fragmento de la url amigable
  */
 function the_slug( $potsId ) {
     $post_data = get_post( $potsId, ARRAY_A );
@@ -195,7 +197,7 @@ function the_slug( $potsId ) {
  */
 function the_type_post() {
 	global $post;
-	$type_post = get_post_type( (int) $post->ID );
+	$type_post = get_post_type( $post->ID );
 	return $type_post;
 }
 
@@ -206,7 +208,7 @@ function the_type_post() {
  */
 function the_taxonomy( $return = 'name' ) {
 	global $post;
-	$taxonomy = wp_get_post_terms( (int) $post->ID, 'curso' );
+	$taxonomy = wp_get_post_terms( $post->ID, 'curso' );
 	if ( isset( $taxonomy ) ) {
 		return $taxonomy[0]->$return;
 	}
@@ -288,14 +290,17 @@ function insert_metas_in_head() {
     return $metas;
 }
 
+// Nuevos tipos de posts.
 require get_template_directory() . '/inc/post-types.php';
+
+// Taxonomies nuevas.
 require get_template_directory() . '/inc/taxonomies.php';
+
+// Nuevos enlaces permanetes para los post_type y taxonomies.
 require get_template_directory() . '/inc/permalinks.php';
+
+// Configuración de los widgets.
 require get_template_directory() . '/inc/widgets.php';
 
-/**
- * Tags personalizados para este tema.
- *
- * @since Adaptar.ME 0.2.0
- */
+// Tags personalizados para este tema.
 require get_template_directory() . '/inc/template-tags.php';
