@@ -7,6 +7,7 @@
  * @since Adaptar.ME 1.0
  */
 ?>
+        </div><!-- .row -->
       </div><!-- .container -->
     </div><!-- .wrapper -->
 

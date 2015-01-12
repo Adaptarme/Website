@@ -1,4 +1,5 @@
-$(document).ready(function (){
+
+$( document ).ready(function() {
 
 	/*----------------------------------------------------*/
 	/*  Contact Form
@@ -77,6 +78,15 @@ $(document).ready(function (){
 
 		});
 	});
+	
+	/*----------------------------------------------------*/
+	/*  FitVids.js
+	/*----------------------------------------------------*/
+	$("article").fitVids({ customSelector: "iframe"});
+
+});
+
+$( window ).load(function() {
 
 	/*----------------------------------------------------*/
 	/*  Masonry
@@ -119,10 +129,5 @@ $(document).ready(function (){
 		}
 
 	}).trigger('resize');
-
-	/*----------------------------------------------------*/
-	/*  FitVids.js
-	/*----------------------------------------------------*/
-	$("article").fitVids({ customSelector: "iframe"});
 
 });

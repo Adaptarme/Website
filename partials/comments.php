@@ -29,7 +29,7 @@ if ( post_password_required() ) {
                 <input type="email" name="email" class="form-control" value="<?php echo esc_attr(  $commenter['comment_author_email'] ); ?>" placeholder="<?php echo __( 'Correo electrónico', 'adaptarme' ); ?>">
             </div>
             <div class="col-xs-3">
-                <input type="submit" name="submit" class="btn btn-primary btn-block" value="<?php echo __( 'Publicar', 'adaptarme' ) ?>">
+                <button type="submit" name="submit" class="btn btn-primary btn-block"><?php echo __( 'Publicar', 'adaptarme' ); ?></button>
             </div>
         </div>
         <input type="hidden" name="comment_post_ID" value="<?php echo $post->ID; ?>" />

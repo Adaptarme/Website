@@ -1,16 +1,13 @@
 <?php
 get_header(); ?>
 
-<div class="row">
-	<section class="col-md-8" role="main">
+	<section class="col-md-8 clearfix" role="main">
 		
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'partials/content', get_post_format() ); ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
-
-		<hr />
 
 		<?php
 		if ( comments_open() ) :
@@ -21,8 +18,9 @@ get_header(); ?>
 	</section>
 
 	<div class="col-md-4">
+
 		<aside class="author clearfix">
-		<?php get_template_part( 'partials/author', 'bio' ); ?>
+			<?php get_template_part( 'partials/author', 'bio' ); ?>
 		</aside>
 
 		<?php if ( the_type_post() === 'tutorial' ) : ?>
@@ -48,8 +46,6 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</div>
-
-</div>
 
 <?php
 get_footer();

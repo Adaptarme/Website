@@ -9,7 +9,6 @@
 
 get_header(); ?>
 	
-<div class="row">
 	<section id="grid" class="posts clearfix" role="main">
 			<!--<h2>Descubre las últimas publicaciones</h2>-->
 			<?php $query = new WP_Query( array( 'post_type' => array( 'post', 'tutorial' ) ) ); ?>
@@ -22,7 +21,6 @@ get_header(); ?>
 			</div>
 			<?php wp_reset_postdata(); ?>
 	</section><!-- .posts -->
-</div><!-- .row -->
 		
 <?php
 get_footer();

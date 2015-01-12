@@ -37,7 +37,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="header" role="banner">
+    <header class="header white" role="banner">
         <div class="container">
             <div class="nav-container">
                 <nav class="navbar navbar-default" role="navigation">
@@ -60,5 +60,6 @@
         </div><!-- .container -->
     </header>
 
-    <div class="wrapper clearfix">
-    <div class="container">  
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">

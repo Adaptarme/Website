@@ -1,7 +1,6 @@
 <?php
 get_header(); ?>
 
-<div class="row">
 	<section class="col-md-8 clearfix" role="main">
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -13,8 +12,6 @@ get_header(); ?>
 	<div class="col-md-3">
 		<?php get_sidebar(); ?>
 	</div>
-
-</div>
 
 <?php
 get_footer();

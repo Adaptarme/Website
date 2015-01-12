@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Adaptarme
- * @since Adaptar.ME 1.0
+ * @since Adaptar.ME 0.2.0
  */
 ?>
 
@@ -14,14 +14,14 @@
 
 	<?php if ( is_single() || is_category() || is_archive() ) : ?>
 		<?php if ( the_type_post() === 'tutorial' ) : ?>
-		<h4 class="naranja"><?php echo the_taxonomy( 'name' ); ?></h4>
+		<h5 class="naranja"><?php echo the_taxonomy( 'name' ); ?></h5>
 		<?php endif; ?> 
 		<?php the_title( '<h2>', '</h2>' ); ?>
 		<div class="paragraphs">
 			<?php the_content(); ?>
 		</div>
 	<?php else : ?>
-		<div class="views-row">
+		<div class="views-row white">
 			<?php if ( has_post_thumbnail()) : ?>
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'medium', array( 'class' => 'img-responsive' ) ); ?></a>
 			<?php endif; ?>
