@@ -159,21 +159,13 @@ add_filter( 'user_contactmethods', 'adaptarme_user_contact' );
  */
 function social_author( $userID ) {
 	$twitter = get_the_author_meta('twitter', $userID); 
-	$facebook = get_the_author_meta('facebook', $userID);
 
-	if ( $twitter || $facebook ) :
-		$social  = "<ul class=\"list-inline\">\r\n";
-		if ( $twitter ) {
-			$social .= "<li><a href=\"https://twitter.com/${twitter}\" target=\"_blank\">Twitter</a></li>\r\n";
-		}
-	
-		if ( $facebook ) {
-			$social .= "<li>-</li>\r\n";
-			$social .= "<li><a href=\"https://facebook.com/${facebook}\" target=\"_blank\">Facebook</a></li>\r\n";
-		}
-		$social .= "</ul>\r\n";
+	if ( isset( $twitter ) ) {
+		$social  = "<small>Sígueme en ";
+		$social .= "<a href=\"https://twitter.com/${twitter}\" target=\"_blank\">Twitter</a>";
+		$social .= "</small>";
 		echo $social;
-	endif;
+	}
 }
 
 /**
@@ -200,7 +192,6 @@ function the_type_post() {
 	$type_post = get_post_type( $post->ID );
 	return $type_post;
 }
-
 /**
  * Retorna (name|slug) de la taxonomy.
  *
@@ -209,7 +200,7 @@ function the_type_post() {
 function the_taxonomy( $return = 'name' ) {
 	global $post;
 	$taxonomy = wp_get_post_terms( $post->ID, 'curso' );
-	if ( isset( $taxonomy ) ) {
+	if ( ! empty( $taxonomy ) ) {
 		return $taxonomy[0]->$return;
 	}
 }

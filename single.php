@@ -20,29 +20,30 @@ get_header(); ?>
 	<div class="col-md-4">
 
 		<aside class="author clearfix">
+			<h3>Autor del <?php echo the_type_post(); ?></h3>
+			<hr />
 			<?php get_template_part( 'partials/author', 'bio' ); ?>
 		</aside>
 
 		<?php if ( the_type_post() === 'tutorial' ) : ?>
-		
-		<aside class="panel panel-default">
-			
-			<div class="panel-heading">
-				<h3 class="panel-title">Capítulos</h3>
-			</div>
-			
 			<?php $query = new WP_Query( array( 'curso' => the_taxonomy( 'slug' ) ) ); ?>
 			<?php if ( $query->have_posts() ) : ?>
+			<aside id="sticker" class="panel panel-default">
+			
+				<div class="panel-heading">
+					<h3 class="panel-title">Capítulos</h3>
+				</div>
+			
 				<ul class="list-group">
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<li class="list-group-item"><?php the_title( '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>' ); ?></li>
 				<?php endwhile; ?>
 				</ul>
+				
+			</aside>
+
 			<?php endif; ?>
 			<?php wp_reset_postdata(); ?>
-		
-		</aside>
-
 		<?php endif; ?>
 
 	</div>

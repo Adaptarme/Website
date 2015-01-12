@@ -36,6 +36,7 @@
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/prismjs/components/prism-python.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/prismjs/components/prism-ruby.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/prismjs/components/prism-php.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/libs/sticky/jquery.sticky.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>
   <!-- endbuild -->
 </body>

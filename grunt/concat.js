@@ -12,6 +12,7 @@ module.exports = {
 					'./libs/bootstrap/dist/js/bootstrap.js',
 					'./libs/masonry/dist/masonry.pkgd.js',
 					'./libs/fitvids/jquery.fitvids.js',
+					'./libs/sticky/jquery.sticky.js',
 					'./libs/prismjs/prism.js',
 					'./libs/prismjs/components/prism-css.js',
 					'./libs/prismjs/components/prism-javascript.js',

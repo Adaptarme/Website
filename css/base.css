@@ -230,14 +230,22 @@ footer { height: auto; width: auto; }
  */
 
 .author {
-  padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+.author h3 {
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-size: 16px;
+  /*text-transform: uppercase;*/
+}
+.author h4 {
+  margin-bottom: 0px;
 }
 .author img {
-  float: right;
-  margin-top: 12px;
-  margin-left: 10px;
-  border-radius: 50%;
+  float: left;
+  margin-top: -2px;
+  margin-right: 20px;
+  border: 3px solid #FFFFFF;
 }
 
 /**

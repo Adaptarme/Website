@@ -10,6 +10,7 @@
     "jquery-validation": "~1.13.1",
     "masonry": "~3.2.1",
     "prismjs": "*",
-    "fitvids": "~1.1.0"
+    "fitvids": "~1.1.0",
+    "sticky": "master"
   }
 }
