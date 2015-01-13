@@ -8,5 +8,5 @@ $full_name = "${first_name} ${last_name}";
 <h4><?php echo $full_name; ?></h4>
 <p><?php echo the_author_meta( 'description' ); ?></p>
 <div class="text-left">
-	<?php social_author( $userID ); ?>
+	<?php echo social_author( $userID ); ?>
 </div>

@@ -1,5 +1,6 @@
-/** Copiar archivos y carpetas.
- * @link https://github.com/gruntjs/grunt-contrib-copy
+/**
+ * Copiar archivos y carpetas.
+ * Ver: https://github.com/gruntjs/grunt-contrib-copy
  */
 module.exports = {
 	html: {

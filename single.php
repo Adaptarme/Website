@@ -1,4 +1,12 @@
 <?php
+/**
+ * La plantilla para la visualización de todos los posts y archivos adjuntos.
+ *
+ * @package WordPress
+ * @subpackage Adaptarme
+ * @since Adaptar.ME 0.2.0
+ */
+
 get_header(); ?>
 
 	<section class="col-md-8 clearfix" role="main">

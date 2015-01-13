@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Adaptarme
- * @since Adaptar.ME 1.0
+ * @since Adaptar.ME 0.2.0
  */
 
 get_header(); ?>

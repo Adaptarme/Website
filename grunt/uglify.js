@@ -1,5 +1,6 @@
-/** Minificar archivos JavasScript.
- * @link https://github.com/gruntjs/grunt-contrib-uglify
+/**
+ * Minificar archivos JavasScript.
+ * Ver: https://github.com/gruntjs/grunt-contrib-uglify
  */
 module.exports = {
 	generated: {

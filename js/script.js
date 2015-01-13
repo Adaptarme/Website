@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
 	/*----------------------------------------------------*/
 	/*  Contact Form
@@ -94,7 +94,7 @@ $( document ).ready(function() {
 
 });
 
-$( window ).load(function() {
+$(window).load(function() {
 
 	/*----------------------------------------------------*/
 	/*  Masonry
@@ -102,7 +102,7 @@ $( window ).load(function() {
 	
 	// Takes the gutter width from the bottom margin of .post
 	var gutter = parseInt( $('.post').css('marginBottom') );
-	var container = $('#posts');
+	var container = $('.posts');
 
 	// Creates an instance of Masonry on #posts
 	container.masonry({

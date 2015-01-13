@@ -1,12 +1,22 @@
 <?php
 /**
+ * Funciones registrar las taxonomies.
+ *
+ * @package WordPress
+ * @subpackage Adaptarme
+ * @since Adaptar.ME 0.2.0
+ */
+
+if ( ! function_exists( 'adaptarme_register_taxonomy_course' ) ) :
+/**
  * Registramos una taxonomy Cursos para los tutoriales.
  *
  * @link http://codex.wordpress.org/Taxonomies
  *
  * @uses register_taxonomy
  */
-function register_my_taxonomy() {
+add_action( 'init', 'adaptarme_register_taxonomy_course', 0 );
+function adaptarme_register_taxonomy_course() {
 
 	$labels = array(
 		'name'                       => _x( 'Cursos', 'Todos los cursos', 'adaptarme' ),
@@ -34,4 +44,4 @@ function register_my_taxonomy() {
 	register_taxonomy( 'curso', array( 'tutorial' ), $args );
 
 }
-add_action( 'init', 'register_my_taxonomy', 0 );
+endif;

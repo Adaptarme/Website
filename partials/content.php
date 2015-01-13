@@ -14,7 +14,7 @@
 
 	<?php if ( is_single() || is_category() || is_archive() ) : ?>
 		<?php if ( the_type_post() === 'tutorial' ) : ?>
-		<h5 class="naranja"><?php echo the_taxonomy( 'name' ); ?></h5>
+		<h5 class="naranja text-uppercase"><?php echo the_taxonomy( 'name' ); ?></h5>
 		<?php endif; ?> 
 		<?php the_title( '<h2>', '</h2>' ); ?>
 		<div class="paragraphs">

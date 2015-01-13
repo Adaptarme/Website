@@ -2,9 +2,6 @@
 /**
  * Etiquetas personalizadas para este tema.
  *
- * Con el tiempo, algunas de las funciones aquí podrían
- * ser reemplazados por características básicas.
- *
  * @package WordPress
  * @subpackage Aadptarme
  * @since Adaptar.ME 0.2.0
@@ -13,6 +10,7 @@
 if ( ! function_exists( 'adaptarme_comment' ) ) :
 /**
  * Creamos una funcion para mostrar los comentarios.
+ *
  * @link http://codex.wordpress.org/Function_Reference/wp_list_comments
  */
 function adaptarme_comment( $comment, $args, $depth ) {

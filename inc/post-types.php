@@ -1,12 +1,22 @@
 <?php
 /**
+ * Funciones para crear los tipos de posts.
+ *
+ * @package WordPress
+ * @subpackage Adaptarme
+ * @since Adaptar.ME 0.2.0
+ */
+
+if ( ! function_exists( 'adaptarme_register_taxonomy_course' ) ) :
+/**
  * Registrar un post type para los tutoriales.
  *
  * @link http://codex.wordpress.org/Post_Types
  * 
  * @uses register_post_type
  */
-function adaptarme_register_my_types() {
+add_action( 'init', 'adaptarme_register_post_type_tutorial', 0 );
+function adaptarme_register_post_type_tutorial() {
 
 	/**
 	 * Una matriz con el texto de los labels.
@@ -47,4 +57,4 @@ function adaptarme_register_my_types() {
 	register_post_type( 'tutorial', $args );
 
 }
-add_action( 'init', 'adaptarme_register_my_types', 0 );
+endif;

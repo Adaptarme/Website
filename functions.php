@@ -143,7 +143,6 @@ add_action( 'wp_ajax_nopriv_send_email', 'send_email_contact' ); // ajax for not
 function adaptarme_user_contact( $user_contact ) {
 
 	// Añadir métodos de contacto del usuario
-	$user_contact['facebook'] = __('Facebook'); 
 	$user_contact['twitter'] = __('Twitter');
 
 	return $user_contact;
@@ -164,7 +163,7 @@ function social_author( $userID ) {
 		$social  = "<small>Sígueme en ";
 		$social .= "<a href=\"https://twitter.com/${twitter}\" target=\"_blank\">Twitter</a>";
 		$social .= "</small>";
-		echo $social;
+		return $social;
 	}
 }
 
