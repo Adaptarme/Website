@@ -28,12 +28,12 @@ get_header(); ?>
 	<div class="col-md-4">
 
 		<aside class="author clearfix">
-			<h3>Autor del <?php echo the_type_post(); ?></h3>
+			<h3>Autor del <?php echo get_post_type( $post->ID ); ?></h3>
 			<hr />
 			<?php get_template_part( 'partials/author', 'bio' ); ?>
 		</aside>
 
-		<?php if ( the_type_post() === 'tutorial' ) : ?>
+		<?php if ( get_post_type( $post->ID ) === 'tutorial' ) : ?>
 			<?php $query = new WP_Query( array( 'curso' => the_taxonomy( 'slug' ) ) ); ?>
 			<?php if ( $query->have_posts() ) : ?>
 			<aside id="sticker" class="panel panel-default">

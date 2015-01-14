@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>">
 
 	<?php if ( is_single() || is_category() || is_archive() ) : ?>
-		<?php if ( the_type_post() === 'tutorial' ) : ?>
+		<?php if ( get_post_type( $post->ID ) === 'tutorial' ) : ?>
 		<h5 class="naranja text-uppercase"><?php echo the_taxonomy( 'name' ); ?></h5>
 		<?php endif; ?> 
 		<?php the_title( '<h2>', '</h2>' ); ?>

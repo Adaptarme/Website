@@ -182,16 +182,6 @@ function the_slug( $potsId ) {
 }
 
 /**
- * Retorna el tipo de post.
- *
- * @uses get_post_type
- */
-function the_type_post() {
-	global $post;
-	$type_post = get_post_type( $post->ID );
-	return $type_post;
-}
-/**
  * Retorna (name|slug) de la taxonomy.
  *
  * @uses wp_get_post_terms
