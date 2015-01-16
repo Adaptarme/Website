@@ -214,13 +214,12 @@ pre[class*="language-"] {
  */
 .posts .views-row {
   border: 1px solid #DDDDDD;
-  height: 100%;
   margin-bottom: 30px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-      -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-       -o-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
+     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
+      -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
+       -o-box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
 }
 .posts .views-row .inner {
   padding: 5px 10px;

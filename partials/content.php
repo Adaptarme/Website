@@ -2,8 +2,6 @@
 /**
  * La plantilla predeterminada para mostrar el contenido.
  *
- * Se utiliza tanto para el single y el index/archive/search.
- *
  * @package WordPress
  * @subpackage Adaptarme
  * @since Adaptar.ME 0.2.0
@@ -26,7 +24,7 @@
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'medium', array( 'class' => 'img-responsive' ) ); ?></a>
 			<?php endif; ?>
 			<div class="inner">
-				<?php if ( the_type_post() === 'tutorial' ) : ?>
+				<?php if ( get_post_type( $post->ID ) === 'tutorial' ) : ?>
 				<h6 class="naranja"><?php echo the_taxonomy( 'name' ); ?></h6>
 				<?php endif; ?> 
 				<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
