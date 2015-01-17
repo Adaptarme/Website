@@ -8,7 +8,6 @@ module.exports = {
 			'.htaccess',
 			'./*.php',
 			'./screenshot.png',
-			'./css/*',
 			'./images/*',
 			'./inc/*',
 			'./page-templates/*',

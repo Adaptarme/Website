@@ -5,7 +5,7 @@
 module.exports = {
 	generated: {
 		options: {
-			sourceMap: true,
+			sourceMap: false,
 			sourceMapName: '../dist/js/main.map'
 		},
 		files: [

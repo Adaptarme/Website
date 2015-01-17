@@ -100,42 +100,10 @@ function simple_menu_list( $menu_name ) {
             $url = $menu_item->url;
             $menu_list .= "<li><a href=\"${url}\">${title}</a></li>\r\n";
         }
-        
-        $menu_list .= "<li><a data-toggle=\"modal\" href=\"".get_stylesheet_directory_uri()."/partials/modal-contact.html\" data-target=\"#modal\">Contacto</a></li>\r\n";
         $menu_list .= "</ul>\r\n";
     }
     return $menu_list;
 }
-
-/**
- * Funcion para enviar el email de contacto.
- * 
- * @uses str_replace
- * @uses phpversion
- * @uses mail
- * 
- * @return string Mensaje para el usuario que envio el email
- */
-function send_email_contact() {
-	$name    = $_POST['name'];
-	$email   = $_POST['email'];
-	$content = $_POST['content'];
-
-	if ( $name !== '' && $email !== '' ) {
-		$to = get_bloginfo( 'admin_email', 'raw' ); // Destinatario/s del correo.
-		$subject = $name; // Título del correo electrónico a enviar.
-		$message = str_replace( "\n.", "\n..", $content );
-		$headers = "From: ${email}\r\n" .
-				   "Reply-To: ${email}\r\n" .
-				   "X-Mailer: PHP/" . phpversion();
-		if ( mail( $to, $subject, $message, $headers ) ) // Enviar correo
-			echo '<strong>Felicidades</strong> , tu mensaje fue enviado! :)';
-	}
-	
-	die(); // detener la ejecución del script
-}
-add_action( 'wp_ajax_send_email', 'send_email_contact' ); // ajax para los usuarios registrados
-add_action( 'wp_ajax_nopriv_send_email', 'send_email_contact' ); // ajax for not logged in users
 
 /**
  * Agregamos campos en el perfil del usuarios para las redes sociales.
