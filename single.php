@@ -39,7 +39,7 @@ get_header(); ?>
 			<aside id="sticker" class="panel panel-default">
 			
 				<div class="panel-heading">
-					<h3 class="panel-title">Capítulos</h3>
+					<h3 class="panel-title"><?php echo the_taxonomy( 'name' ); ?></h3>
 				</div>
 			
 				<ul class="list-group">

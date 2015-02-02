@@ -293,10 +293,6 @@ pre[class*="language-"] {
   background-color: #FFFFFF;
 } 
 .alert { display: none; }
-.naranja {
-  color: #ff9000;
-  font-family: 'Open Sans', sans-serif;
-}
 .paragraphs {
   color: #333333;
   font-size: 16px;
