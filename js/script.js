@@ -1,10 +1,4 @@
 $(document).ready(function() {
-	
-	/*----------------------------------------------------*/
-	/*  FitVids.js
-	/*----------------------------------------------------*/
-
-	$("article").fitVids({ customSelector: "iframe" });
 
 	/*----------------------------------------------------*/
 	/*  Sticky
@@ -13,6 +7,13 @@ $(document).ready(function() {
 	$("#sticker").sticky({
 		topSpacing: 20
 	});
+	
+	/*----------------------------------------------------*/
+	/*  FitVids.js
+	/*----------------------------------------------------*/
+
+	$("article").fitVids({ customSelector: "iframe" });
+
 
 });
 
@@ -21,27 +22,24 @@ $(window).load(function() {
 	/*----------------------------------------------------*/
 	/*  Masonry
 	/*----------------------------------------------------*/
-	
-	// Takes the gutter width from the bottom margin of .post
-	var gutter = parseInt( $('.post').css('marginBottom') );
-	var container = $('.posts');
-
-	// Creates an instance of Masonry on #posts
-	container.masonry({
-		gutter: gutter,
-		itemSelector: '.post',
-		columnWidth: '.post'
-	});
-	
-	// This code fires every time a user resizes the screen and only affects .post elements
-	// whose parent class isn't .container. Triggers resize first so nothing looks weird.
 	$(window).bind('resize', function () {
+
+		// Takes the gutter width from the bottom margin of .post
+		var gutter = parseInt( $('.post').css('marginBottom') );
+		var container = $('.posts');
+
+		// Creates an instance of Masonry on #posts
+		container.masonry({
+			gutter: gutter,
+			itemSelector: '.post',
+			columnWidth: '.post'
+		});
 
 		if ( ! $('#posts').parent().hasClass('container') ) {
 
 			//Restablece todos los anchos a 'auto' para esterilizar cálculos	
 			post_width = $('.post').width() + gutter;
-			//$('#posts, body > #grid').css('width', 'auto');
+			$('#posts, body > #grid').css('width', 'auto');
 		
 			// Calculates how many .post elements will actually fit per row. Could this code be cleaner?
 			posts_per_row = $('#posts').innerWidth() / post_width;
@@ -54,7 +52,7 @@ $(window).load(function() {
 			
 			// Ensures that all top-level elements have equal width and stay centered
 			//$('#posts, #grid').css('width', posts_width);
-			$('#grid').css({'margin': '0 auto'});
+			$('#posts').css({'margin': '0 auto'});
 
 		}
 

@@ -94,7 +94,7 @@ function simple_menu_list( $menu_name ) {
         // Devuelve un objeto del menú de navegación.
         $menu_items = wp_get_nav_menu_items( $menu->term_id );
 
-        $menu_list = "<ul class=\"nav navbar-nav nav-effect\">\r\n";
+        $menu_list = "<ul class=\"nav navbar-nav navbar-right\">\r\n";
         foreach ( (array) $menu_items as $key => $menu_item ) {
             $title = $menu_item->title;
             $url = $menu_item->url;

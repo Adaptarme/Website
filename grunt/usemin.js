@@ -3,5 +3,11 @@
  * Ver: https://github.com/yeoman/grunt-usemin
  */
 module.exports = {
-	html: ['../dist/header.php', '../dist/footer.php']
+
+	// Indicamos los archivos donde buscara los comentarios y remplazara por los min.
+	html: ['../dist/header.php', '../dist/footer.php'],
+  options: {
+    dest: '../dist'
+  }
+
 };

@@ -8,7 +8,7 @@ module.exports = {
 			'../dist/css/main.css': [
 				'./libs/bootstrap/dist/css/bootstrap.css',
 				'./libs/prismjs/prism.css',
-				'./css/base.css'
+				'./css/*.css'
 				]
 		}
 	}

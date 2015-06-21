@@ -18,7 +18,7 @@
 			<?php the_content(); ?>
 		</div>
 	<?php else : ?>
-		<div class="views-row white">
+		<div class="views-row">
 			<?php if ( has_post_thumbnail()) : ?>
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'medium', array( 'class' => 'img-responsive' ) ); ?></a>
 			<?php endif; ?>

@@ -1,0 +1,63 @@
+::-moz-selection {
+  background-color: #53A3E0;
+  color: #FFFFFF;
+}
+::selection {
+  background-color: #53A3E0;
+  color: #FFFFFF;
+}
+::-webkit-input-placeholder {
+  color: #ACACAC;
+}
+:-moz-placeholder {
+  color: #ACACAC;
+}
+::-moz-placeholder {
+  color: #ACACAC;
+}
+:-ms-input-placeholder {
+  color: #ACACAC;
+}
+html, body {
+  background-color: #f7f7f7;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+a {
+	color: #0072cf;
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+a:hover {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+}
+p a:hover {
+  text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 10px;
+}
+h4 a {
+  color: #0072cf;
+}
+h4 a:hover {
+  color: #263845;
+}
+pre {
+  border: none;
+  border-radius: 0;
+}
+pre[class*="language-"] {
+  background-color: #f8f8f8;
+  margin: -10px 0 20px 0;
+}
